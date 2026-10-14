@@ -1,0 +1,19 @@
+﻿律所主任 AI 研修班｜软件准备清单
+
+1. WorkBuddy：完成安装与登录。
+官网：https://www.workbuddy.cn/
+Windows 安装指南：https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide
+Mac 安装指南：https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Mac-Guide
+
+2. 腾讯 ima：完成安装与登录，准备知识库学习。
+官方下载：https://ima.tencent.com/download
+
+3. 元典 MCP：按课程组后续指南接入并测试。
+官方接入说明：https://open.chineselaw.com/mcp-config/
+
+系统要求（2026-10-14 官网核验）
+Windows：Windows 10及以上，x64；Windows ARM设备需提前核验。
+Mac：macOS 12及以上；WorkBuddy按芯片选ARM64或X64。
+鸿蒙：WorkBuddy已有鸿蒙电脑版，ima已有鸿蒙客户端；最低版本和本班全流程兼容性待核验。
+
+本班 WorkBuddy、ima、元典 MCP 的操作指南待补充。

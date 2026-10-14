@@ -1,0 +1,31 @@
+/* Group scoring: the course preparation policy, not a capped 100-point model. */
+.rules-source{font-size:12px;color:var(--muted);border-bottom:1px solid var(--line);padding:0 0 7px;white-space:nowrap}
+.rules-intro{max-width:800px;font-size:14px;line-height:1.9;color:var(--muted)}
+.score-formula{display:flex;flex-wrap:wrap;align-items:center;gap:12px 17px;margin:30px 0 34px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--blue);font-size:14px}
+.score-formula>span:first-child{font:23px/1.4 var(--serif);color:var(--ink)}
+.score-formula b{font-size:18px;font-weight:400;color:#7395af}
+.scoring-rule-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 38px}
+.scoring-rule-card{padding:25px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column}
+.scoring-rule-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.scoring-rule-heading h3{font:27px/1.5 var(--serif)}
+.rule-nature{font-size:11px;letter-spacing:.08em;border:1px solid #b9cfdf;padding:3px 10px;color:var(--blue)}
+.scoring-rule-card>p{font-size:14px;line-height:1.9;color:var(--muted);padding-bottom:20px}
+.rule-owner{margin-top:auto;font-size:12px;display:flex;gap:18px;color:var(--ink)}
+.rule-owner>span{font-size:11px;color:var(--muted)}
+.rules-guidance{margin-top:30px;border-top:1px solid var(--line)}
+.rules-disclosure{border-bottom:1px solid var(--line)}
+.rules-disclosure>summary{display:flex;justify-content:space-between;align-items:center;font-size:15px;padding:19px 0}
+.rules-disclosure>summary>span{font-size:20px;transition:transform .2s}
+.rules-disclosure[open]>summary>span{transform:rotate(45deg)}
+.rules-disclosure ul{margin:0;padding:0 26px 20px 18px;color:var(--muted);font-size:13px;line-height:1.9}
+.rules-disclosure li+li{margin-top:9px}
+.rules-notice{font-size:12px;line-height:1.9;color:var(--muted);margin-top:24px;max-width:850px}
+.score-breakdown{margin-top:22px;border-top:1px solid var(--line)}
+.score-breakdown>div{display:flex;align-items:center;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px}
+.score-breakdown strong{font:26px Georgia,serif;font-weight:400;color:var(--blue)}
+.score-breakdown strong small{font:12px var(--sans);color:var(--muted)}
+.score-equation{font-size:13px;color:var(--muted);text-align:right;margin-top:10px;font-variant-numeric:tabular-nums}
+.deduction-value{color:#617f96}
+#scores .score-status>strong{color:var(--blue)}
+@media(max-width:860px){.score-formula{gap:10px 14px;font-size:13px}.scoring-rule-grid{gap:0 28px}.scoring-rule-heading h3{font-size:25px}}
+@media(max-width:560px){.rules-source{font-size:11px}.rules-intro{font-size:13px}.score-formula{margin:22px 0 8px;gap:8px 10px;padding:20px 0;font-size:12px}.score-formula>span:first-child{font-size:20px;flex-basis:100%}.score-formula>b:nth-child(2){display:none}.scoring-rule-grid{grid-template-columns:1fr}.scoring-rule-card{padding:22px 0}.scoring-rule-heading{margin-bottom:12px}.scoring-rule-heading h3{font-size:25px}.scoring-rule-card>p{font-size:13px;padding-bottom:17px}.rule-owner{font-size:11px}.rules-guidance{margin-top:24px}.rules-disclosure>summary{font-size:14px;padding:18px 0}.rules-disclosure ul{font-size:12px}.rules-notice{font-size:11px}.score-breakdown>div{font-size:13px}.score-breakdown strong{font-size:24px}.score-equation{font-size:12px}.score-change small{font-size:11px}}

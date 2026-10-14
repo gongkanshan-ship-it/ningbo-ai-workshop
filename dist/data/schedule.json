@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 3,
+  "status": "draft",
+  "notice": "依据现有培训方案展示拟定课表；正式日期及具体安排以通知为准。",
+  "source": "律所主任AI赋能专项研修班（第一期）培训方案 第五节；20261011筹备时间表 第六、七节",
+  "days": [
+    {
+      "id": "day-1",
+      "label": "第一天",
+      "entries": [
+        {
+          "time": "09:00—11:00",
+          "title": "纪考培训、开营与分组",
+          "kind": "activity",
+          "featured": true,
+          "note": "选举组长 · 公布小组 Skill 任务"
+        },
+        {
+          "time": "11:00—11:10",
+          "title": "休息及技术准备",
+          "kind": "interval",
+          "featured": false
+        },
+        {
+          "time": "11:10—12:10",
+          "title": "第一课 · WorkBuddy 初体验",
+          "kind": "course",
+          "featured": true,
+          "courseId": "01"
+        },
+        {
+          "time": "12:10—12:30",
+          "title": "课后任务：完成首次成果并组内互看",
+          "kind": "activity",
+          "featured": false
+        },
+        {
+          "time": "12:30—12:40",
+          "title": "茶歇",
+          "kind": "interval",
+          "featured": false
+        },
+        {
+          "time": "12:40—13:40",
+          "title": "第二课 · 生成式人工智能基础",
+          "kind": "course",
+          "featured": true,
+          "courseId": "02"
+        },
+        {
+          "time": "13:40—14:00",
+          "title": "课后任务：幻觉识别和核验方法练习",
+          "kind": "activity",
+          "featured": false
+        },
+        {
+          "time": "14:00—16:00",
+          "title": "午餐及午休",
+          "kind": "interval",
+          "featured": true
+        },
+        {
+          "time": "16:00—17:15",
+          "title": "第三课 · 法律咨询 Skill 制作",
+          "kind": "course",
+          "featured": true,
+          "courseId": "03"
+        },
+        {
+          "time": "17:15—17:35",
+          "title": "课后任务：Skill 试跑及小组 Skill 任务推进",
+          "kind": "activity",
+          "featured": false
+        },
+        {
+          "time": "17:35—17:45",
+          "title": "当日总结及积分记录",
+          "kind": "activity",
+          "featured": true
+        },
+        {
+          "time": "晚间",
+          "title": "完善小组 Skill",
+          "kind": "activity",
+          "featured": false,
+          "note": "个人补充第一课成果说明和核验标注"
+        }
+      ]
+    },
+    {
+      "id": "day-2",
+      "label": "第二天",
+      "entries": [
+        {
+          "time": "09:00—09:10",
+          "title": "作业点评及积分公布",
+          "kind": "activity",
+          "featured": true
+        },
+        {
+          "time": "09:10—10:10",
+          "title": "第四课 · MCP、知识库与 RAG 实战",
+          "kind": "course",
+          "featured": true,
+          "courseId": "04"
+        },
+        {
+          "time": "10:10—10:30",
+          "title": "课后任务：法律检索和来源核验",
+          "kind": "activity",
+          "featured": false
+        },
+        {
+          "time": "10:30—12:00",
+          "title": "第五课 · 案件分析工作区构建",
+          "kind": "course",
+          "featured": true,
+          "courseId": "05"
+        },
+        {
+          "time": "12:00—14:00",
+          "title": "午餐及午休",
+          "kind": "interval",
+          "featured": true
+        },
+        {
+          "time": "14:00—14:20",
+          "title": "课后任务：工作区规则走查及小组成果完善",
+          "kind": "activity",
+          "featured": false
+        },
+        {
+          "time": "14:20—15:05",
+          "title": "第六课 · 看懂 Agent",
+          "kind": "course",
+          "featured": true,
+          "courseId": "06"
+        },
+        {
+          "time": "15:05—15:15",
+          "title": "茶歇及成果展示准备",
+          "kind": "interval",
+          "featured": false
+        },
+        {
+          "time": "15:15—17:15",
+          "title": "小组成果展示与评审",
+          "kind": "activity",
+          "featured": true
+        },
+        {
+          "time": "17:15—17:45",
+          "title": "评审汇总、表彰与结营",
+          "kind": "activity",
+          "featured": true,
+          "note": "排名公布"
+        }
+      ]
+    }
+  ]
+}

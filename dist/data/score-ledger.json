@@ -1,0 +1,574 @@
+{
+  "schemaVersion": 2,
+  "mode": "demo",
+  "scoreModel": "addition-minus-attendance",
+  "policySource": "08-小组积分制度.md",
+  "teams": [
+    {
+      "id": "T1",
+      "name": "第一组"
+    },
+    {
+      "id": "T2",
+      "name": "第二组"
+    },
+    {
+      "id": "T3",
+      "name": "第三组"
+    },
+    {
+      "id": "T4",
+      "name": "第四组"
+    },
+    {
+      "id": "T5",
+      "name": "第五组"
+    },
+    {
+      "id": "T6",
+      "name": "第六组"
+    }
+  ],
+  "records": [
+    {
+      "id": "DEMO-001",
+      "sequence": 1,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T1",
+      "item": "attendance",
+      "before": 0,
+      "after": 0,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-001",
+        "title": "第一组出勤扣分确认记录（演示）",
+        "content": "虚拟确认记录记载：第一组出勤扣分为0分，由示例观察员报送、示例班务组确认。此数值为出勤扣分，计算小组总分时减去。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-002",
+      "sequence": 2,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T1",
+      "item": "tasks",
+      "before": 0,
+      "after": 12,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例考勤组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-002",
+        "title": "第一组课堂作业加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第一组课堂作业加分为12分，由示例考勤组报送、示例班务组确认。本记录直接采用演示汇总表中已确认的作业加分；不从完成度或人均分推导计分口径。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-003",
+      "sequence": 3,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T1",
+      "item": "collaboration",
+      "before": 0,
+      "after": 5,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-003",
+        "title": "第一组课堂表现加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第一组课堂表现加分为5分，由示例观察员报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-004",
+      "sequence": 4,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T1",
+      "item": "presentation",
+      "before": 0,
+      "after": 16,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例评审组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-004",
+        "title": "第一组成果展示加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第一组成果展示加分为16分，由示例评审组报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-005",
+      "sequence": 5,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T2",
+      "item": "attendance",
+      "before": 0,
+      "after": 1,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-005",
+        "title": "第二组出勤扣分确认记录（演示）",
+        "content": "虚拟确认记录记载：第二组出勤扣分为1分，由示例观察员报送、示例班务组确认。此数值为出勤扣分，计算小组总分时减去。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-006",
+      "sequence": 6,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T2",
+      "item": "tasks",
+      "before": 0,
+      "after": 10,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例考勤组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-006",
+        "title": "第二组课堂作业加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第二组课堂作业加分为10分，由示例考勤组报送、示例班务组确认。本记录直接采用演示汇总表中已确认的作业加分；不从完成度或人均分推导计分口径。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-007",
+      "sequence": 7,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T2",
+      "item": "collaboration",
+      "before": 0,
+      "after": 4,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-007",
+        "title": "第二组课堂表现加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第二组课堂表现加分为4分，由示例观察员报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-008",
+      "sequence": 8,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T2",
+      "item": "presentation",
+      "before": 0,
+      "after": 12,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例评审组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-008",
+        "title": "第二组成果展示加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第二组成果展示加分为12分，由示例评审组报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-009",
+      "sequence": 9,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T3",
+      "item": "attendance",
+      "before": 0,
+      "after": 1,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-009",
+        "title": "第三组出勤扣分确认记录（演示）",
+        "content": "虚拟确认记录记载：第三组出勤扣分为1分，由示例观察员报送、示例班务组确认。此数值为出勤扣分，计算小组总分时减去。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-010",
+      "sequence": 10,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T3",
+      "item": "tasks",
+      "before": 0,
+      "after": 8,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例考勤组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-010",
+        "title": "第三组课堂作业加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第三组课堂作业加分为8分，由示例考勤组报送、示例班务组确认。本记录直接采用演示汇总表中已确认的作业加分；不从完成度或人均分推导计分口径。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-011",
+      "sequence": 11,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T3",
+      "item": "collaboration",
+      "before": 0,
+      "after": 4,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-011",
+        "title": "第三组课堂表现加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第三组课堂表现加分为4分，由示例观察员报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-012",
+      "sequence": 12,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T3",
+      "item": "presentation",
+      "before": 0,
+      "after": 9,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例评审组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-012",
+        "title": "第三组成果展示加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第三组成果展示加分为9分，由示例评审组报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-013",
+      "sequence": 13,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T4",
+      "item": "attendance",
+      "before": 0,
+      "after": 2,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-013",
+        "title": "第四组出勤扣分确认记录（演示）",
+        "content": "虚拟确认记录记载：第四组出勤扣分为2分，由示例观察员报送、示例班务组确认。此数值为出勤扣分，计算小组总分时减去。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-014",
+      "sequence": 14,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T4",
+      "item": "tasks",
+      "before": 0,
+      "after": 6,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例考勤组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-014",
+        "title": "第四组课堂作业加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第四组课堂作业加分为6分，由示例考勤组报送、示例班务组确认。本记录直接采用演示汇总表中已确认的作业加分；不从完成度或人均分推导计分口径。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-015",
+      "sequence": 15,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T4",
+      "item": "collaboration",
+      "before": 0,
+      "after": 3,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-015",
+        "title": "第四组课堂表现加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第四组课堂表现加分为3分，由示例观察员报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-016",
+      "sequence": 16,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T4",
+      "item": "presentation",
+      "before": 0,
+      "after": 7,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例评审组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-016",
+        "title": "第四组成果展示加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第四组成果展示加分为7分，由示例评审组报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-017",
+      "sequence": 17,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T5",
+      "item": "attendance",
+      "before": 0,
+      "after": 1,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-017",
+        "title": "第五组出勤扣分确认记录（演示）",
+        "content": "虚拟确认记录记载：第五组出勤扣分为1分，由示例观察员报送、示例班务组确认。此数值为出勤扣分，计算小组总分时减去。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-018",
+      "sequence": 18,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T5",
+      "item": "tasks",
+      "before": 0,
+      "after": 4,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例考勤组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-018",
+        "title": "第五组课堂作业加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第五组课堂作业加分为4分，由示例考勤组报送、示例班务组确认。本记录直接采用演示汇总表中已确认的作业加分；不从完成度或人均分推导计分口径。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-019",
+      "sequence": 19,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T5",
+      "item": "collaboration",
+      "before": 0,
+      "after": 2,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-019",
+        "title": "第五组课堂表现加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第五组课堂表现加分为2分，由示例观察员报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-020",
+      "sequence": 20,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T5",
+      "item": "presentation",
+      "before": 0,
+      "after": 5,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例评审组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-020",
+        "title": "第五组成果展示加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第五组成果展示加分为5分，由示例评审组报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-021",
+      "sequence": 21,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T6",
+      "item": "attendance",
+      "before": 0,
+      "after": 2,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-021",
+        "title": "第六组出勤扣分确认记录（演示）",
+        "content": "虚拟确认记录记载：第六组出勤扣分为2分，由示例观察员报送、示例班务组确认。此数值为出勤扣分，计算小组总分时减去。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-022",
+      "sequence": 22,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T6",
+      "item": "tasks",
+      "before": 0,
+      "after": 2,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例考勤组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-022",
+        "title": "第六组课堂作业加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第六组课堂作业加分为2分，由示例考勤组报送、示例班务组确认。本记录直接采用演示汇总表中已确认的作业加分；不从完成度或人均分推导计分口径。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-023",
+      "sequence": 23,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T6",
+      "item": "collaboration",
+      "before": 0,
+      "after": 2,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-023",
+        "title": "第六组课堂表现加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第六组课堂表现加分为2分，由示例观察员报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-024",
+      "sequence": 24,
+      "type": "initial",
+      "status": "confirmed",
+      "teamId": "T6",
+      "item": "presentation",
+      "before": 0,
+      "after": 3,
+      "previousRecordId": null,
+      "displayTime": "演示场次 · 10:00",
+      "reason": "依据演示记录完成分项初次登记。",
+      "reporter": "示例评审组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-024",
+        "title": "第六组成果展示加分确认记录（演示）",
+        "content": "虚拟确认记录记载：第六组成果展示加分为3分，由示例评审组报送、示例班务组确认。无真实学员或活动数据。"
+      }
+    },
+    {
+      "id": "DEMO-025",
+      "sequence": 25,
+      "type": "correction",
+      "status": "confirmed",
+      "teamId": "T1",
+      "item": "collaboration",
+      "before": 5,
+      "after": 6,
+      "previousRecordId": "DEMO-003",
+      "displayTime": "演示场次 · 10:10",
+      "reason": "复核课堂记录，补记1次已确认的有效互动，课堂表现加分由5分更正为6分。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-025",
+        "title": "第一组有效互动复核单（演示）",
+        "content": "这是演示用复核依据。复核课堂记录，补记1次已确认的有效互动，课堂表现加分由5分更正为6分。更正针对原记录DEMO-003，原记录保留；经示例观察员报送、示例班务组确认后生效。无真实活动凭证。"
+      }
+    },
+    {
+      "id": "DEMO-026",
+      "sequence": 26,
+      "type": "correction",
+      "status": "confirmed",
+      "teamId": "T2",
+      "item": "attendance",
+      "before": 1,
+      "after": 0,
+      "previousRecordId": "DEMO-005",
+      "displayTime": "演示场次 · 10:15",
+      "reason": "签到复核确认原缺勤登记有误，出勤扣分由1分更正为0分，小组总分增加1分。",
+      "reporter": "示例考勤组",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-026",
+        "title": "第二组签到复核单（演示）",
+        "content": "这是演示用复核依据。签到复核确认原缺勤登记有误，出勤扣分由1分更正为0分，小组总分增加1分。更正针对原记录DEMO-005，原记录保留；经示例考勤组报送、示例班务组确认后生效。无真实活动凭证。"
+      }
+    },
+    {
+      "id": "DEMO-027",
+      "sequence": 27,
+      "type": "correction",
+      "status": "confirmed",
+      "teamId": "T3",
+      "item": "collaboration",
+      "before": 4,
+      "after": 5,
+      "previousRecordId": "DEMO-011",
+      "displayTime": "演示场次 · 10:20",
+      "reason": "核对观察员原始记录后，补记1次有效互动，课堂表现加分由4分更正为5分。",
+      "reporter": "示例观察员",
+      "confirmer": "示例班务组",
+      "evidence": {
+        "id": "E-DEMO-027",
+        "title": "第三组课堂记录复核单（演示）",
+        "content": "这是演示用复核依据。核对观察员原始记录后，补记1次有效互动，课堂表现加分由4分更正为5分。更正针对原记录DEMO-011，原记录保留；经示例观察员报送、示例班务组确认后生效。无真实活动凭证。"
+      }
+    }
+  ]
+}

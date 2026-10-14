@@ -1,0 +1,55 @@
+/* Two-day timetable with an unobstructed courtyard illustration. */
+.schedule-overview{grid-template-columns:48% 52%;min-height:680px;overflow-anchor:none}
+.schedule-panel{padding:44px clamp(28px,5.8vw,84px);display:flex;flex-direction:column;align-items:stretch;min-width:0}
+.schedule-panel h2{font:38px/1.4 var(--serif);margin:17px 0 0}
+.schedule-edition{font-size:12px;line-height:1.8;color:#c2d9e9;margin-top:12px}
+.schedule-days{display:flex;gap:0;border-bottom:1px solid #6285a1;margin-top:25px}
+.schedule-day-tab{border:0;border-bottom:2px solid transparent;padding:12px 18px 11px;background:none;color:#bbd0df;margin-bottom:-1px;display:flex;align-items:center;gap:13px;flex:1;text-align:left}
+.schedule-day-tab span{font-size:14px;white-space:nowrap}.schedule-day-tab small{white-space:nowrap;font:11px/1 Georgia,serif;letter-spacing:.08em;color:#9dbed5}
+.schedule-day-tab[aria-selected=true]{color:#fff;border-bottom-color:#e3f1fa;background:#ffffff08}
+.schedule-day-tab:hover{background:#ffffff0b}.schedule-day-tab:focus-visible{outline-color:#d9edf9;outline-offset:-3px}
+.day-timetable{display:grid;margin-top:6px;min-width:0}
+/* Hidden days remain in the same grid cell to reserve the tallest layout. */
+.timetable-day{grid-area:1/1;align-self:start;min-width:0;visibility:hidden;pointer-events:none}
+.timetable-day.is-active{visibility:visible;pointer-events:auto}.timetable-list{list-style:none;margin:0;padding:0}
+.timetable-row{display:grid;grid-template-columns:92px 1fr;gap:15px;padding:15px 0;border-bottom:1px solid #ffffff20;align-items:baseline;min-width:0}
+.timetable-row:last-child{border:0}.timetable-time{font:13px/1.7 var(--sans);color:#c0d7e8;font-variant-numeric:tabular-nums;white-space:nowrap}.timetable-content{min-width:0}
+.timetable-content h3{font:18px/1.65 var(--serif);margin:0;color:#fff}.timetable-content p{font-size:11px;line-height:1.7;color:#aac5d8;margin:4px 0 0}
+.timetable-row.is-interval .timetable-content h3{font:13px/1.7 var(--sans);color:#b9cfdf}
+.timetable-course-link{display:flex;align-items:baseline;justify-content:space-between;gap:8px;color:inherit;transition:color .15s}.timetable-course-link:hover{color:#c9e6fb}.timetable-course-link span{font:14px var(--sans);flex-shrink:0;color:#b6d5ea}
+.schedule-panel>.light-link{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;color:#fff;border:0;border-top:1px solid #64839b;margin-top:22px;padding:17px 0 0;font-size:13px;text-align:left}
+.schedule-panel>.light-link:disabled{opacity:.5}.schedule-notice{font-size:11px;line-height:1.8;color:#b0cbdc;margin-top:12px}
+.schedule-visual{min-height:680px}.schedule-visual>img{object-position:62% center}
+.programme-note{font-size:13px;color:var(--muted);margin-bottom:26px;line-height:1.9}
+.programme-days{display:grid;grid-template-columns:1fr 1fr;gap:30px}.programme-day{min-width:0}.programme-day>h3{font:27px/1.4 var(--serif);margin:0 0 18px}.programme-day>h3 small{font:11px var(--sans);color:var(--muted);margin-left:12px;letter-spacing:.1em}
+.programme-day .timetable-list{border-top:1px solid var(--line)}.programme-day .timetable-row{grid-template-columns:1fr;gap:5px;padding:17px 0;border-color:var(--line)}
+.programme-day .timetable-time{color:var(--blue);font-size:12px}.programme-day .timetable-content h3{color:var(--ink);font-size:21px}.programme-day .timetable-content p{color:var(--muted);font-size:12px}.programme-day .is-interval .timetable-content h3{font:14px/1.7 var(--sans);color:var(--muted)}
+.programme-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:9px}.programme-links .text-link{font-size:12px;gap:10px;padding:4px 0}
+.resource-grid-single{grid-template-columns:1fr}.resource-grid-single .resource-summary{min-height:0}.single-resource-toolbar{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-bottom:24px;font-size:13px;color:var(--muted)}.single-resource-toolbar .text-link{font-size:12px;flex-shrink:0}
+@media(max-width:1100px){.schedule-overview{grid-template-columns:49% 51%}.schedule-panel{padding:40px 36px}.schedule-panel h2{font-size:33px}.timetable-row{grid-template-columns:87px 1fr;gap:13px;padding:14px 0}.timetable-content h3{font-size:17px}.timetable-time{font-size:12px}.schedule-visual{min-height:670px}}
+@media(max-width:860px){.schedule-overview{grid-template-columns:50% 50%}.schedule-panel{padding:36px 29px}.schedule-panel h2{font-size:30px}.schedule-edition{font-size:11px}.schedule-day-tab{padding:11px 10px;gap:10px}.schedule-day-tab span{font-size:13px}.timetable-row{grid-template-columns:80px 1fr;gap:11px}.timetable-content h3{font-size:17px}.timetable-time{font-size:11px}.timetable-content p{font-size:11px}.schedule-notice{font-size:11px}}
+@media(max-width:560px){.schedule-overview{display:flex;flex-direction:column}.schedule-panel{padding:35px 25px 32px}.schedule-panel h2{font-size:32px}.schedule-edition{font-size:12px}.schedule-days{margin-top:23px}.schedule-day-tab{padding:12px 14px}.schedule-day-tab span{font-size:14px}.timetable-row{grid-template-columns:91px 1fr;gap:15px;padding:15px 0}.timetable-time{font-size:12px}.timetable-content h3{font-size:19px}.timetable-content p{font-size:12px}.schedule-visual{min-height:310px}.programme-days{grid-template-columns:1fr;gap:28px}.programme-day>h3{font-size:26px}.programme-day .timetable-row{grid-template-columns:85px 1fr;gap:13px}.programme-day .timetable-content h3{font-size:19px}.programme-links{gap:12px}.programme-links .text-link{font-size:11px;gap:7px}.single-resource-toolbar{display:block}.single-resource-toolbar .text-link{margin-top:9px}.site-header #main-nav{overflow-x:auto;gap:10px;justify-content:space-between;scrollbar-width:none}.site-header #main-nav>a{flex-shrink:0}.site-header #main-nav a,#score-nav-toggle{font-size:12px}}
+
+/* Keep all seven section links visible on a narrow screen. */
+@media(max-width:560px){
+ .site-header #main-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 8px;overflow:visible;padding:2px 0 4px}
+ .site-header #main-nav>a,.site-header #score-nav-toggle{justify-self:center;justify-content:center;min-height:42px;padding:10px 0;font-size:13px;white-space:nowrap}
+}
+
+/* Slightly larger section navigation and primary resource entry. */
+.site-header #main-nav>a,.site-header #score-nav-toggle{font-size:15px}
+.header-main .header-cta{font-size:15px}
+@media(max-width:860px){
+ .site-header #main-nav{gap:clamp(8px,2vw,16px)}
+ .site-header #main-nav>a,.site-header #score-nav-toggle{font-size:14px}
+ .header-main .header-cta{font-size:14px}
+}
+@media(max-width:560px){
+ .site-header #main-nav{gap:0 8px}
+ .site-header #main-nav>a,.site-header #score-nav-toggle{font-size:14px;min-height:46px;padding:11px 0}
+ .header-main .header-cta{font-size:13px}
+}
+
+@media(min-width:561px) and (max-width:650px){
+ .schedule-day-tab{min-width:0;padding-left:6px;padding-right:6px;gap:6px}
+}
