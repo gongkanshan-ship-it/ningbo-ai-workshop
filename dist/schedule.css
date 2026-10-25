@@ -28,28 +28,66 @@
 .resource-grid-single{grid-template-columns:1fr}.resource-grid-single .resource-summary{min-height:0}.single-resource-toolbar{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-bottom:24px;font-size:13px;color:var(--muted)}.single-resource-toolbar .text-link{font-size:12px;flex-shrink:0}
 @media(max-width:1100px){.schedule-overview{grid-template-columns:49% 51%}.schedule-panel{padding:40px 36px}.schedule-panel h2{font-size:33px}.timetable-row{grid-template-columns:87px 1fr;gap:13px;padding:14px 0}.timetable-content h3{font-size:17px}.timetable-time{font-size:12px}.schedule-visual{min-height:670px}}
 @media(max-width:860px){.schedule-overview{grid-template-columns:50% 50%}.schedule-panel{padding:36px 29px}.schedule-panel h2{font-size:30px}.schedule-edition{font-size:11px}.schedule-day-tab{padding:11px 10px;gap:10px}.schedule-day-tab span{font-size:13px}.timetable-row{grid-template-columns:80px 1fr;gap:11px}.timetable-content h3{font-size:17px}.timetable-time{font-size:11px}.timetable-content p{font-size:11px}.schedule-notice{font-size:11px}}
-@media(max-width:560px){.schedule-overview{display:flex;flex-direction:column}.schedule-panel{padding:35px 25px 32px}.schedule-panel h2{font-size:32px}.schedule-edition{font-size:12px}.schedule-days{margin-top:23px}.schedule-day-tab{padding:12px 14px}.schedule-day-tab span{font-size:14px}.timetable-row{grid-template-columns:91px 1fr;gap:15px;padding:15px 0}.timetable-time{font-size:12px}.timetable-content h3{font-size:19px}.timetable-content p{font-size:12px}.schedule-visual{min-height:310px}.programme-days{grid-template-columns:1fr;gap:28px}.programme-day>h3{font-size:26px}.programme-day .timetable-row{grid-template-columns:85px 1fr;gap:13px}.programme-day .timetable-content h3{font-size:19px}.programme-links{gap:12px}.programme-links .text-link{font-size:11px;gap:7px}.single-resource-toolbar{display:block}.single-resource-toolbar .text-link{margin-top:9px}.site-header #main-nav{overflow-x:auto;gap:10px;justify-content:space-between;scrollbar-width:none}.site-header #main-nav>a{flex-shrink:0}.site-header #main-nav a,#score-nav-toggle{font-size:12px}}
+@media(max-width:560px){.schedule-overview{display:flex;flex-direction:column}.schedule-panel{padding:35px 25px 32px}.schedule-panel h2{font-size:32px}.schedule-edition{font-size:12px}.schedule-days{margin-top:23px}.schedule-day-tab{padding:12px 14px}.schedule-day-tab span{font-size:14px}.timetable-row{grid-template-columns:91px 1fr;gap:15px;padding:15px 0}.timetable-time{font-size:12px}.timetable-content h3{font-size:19px}.timetable-content p{font-size:12px}.schedule-visual{min-height:310px}.programme-days{grid-template-columns:1fr;gap:28px}.programme-day>h3{font-size:26px}.programme-day .timetable-row{grid-template-columns:85px 1fr;gap:13px}.programme-day .timetable-content h3{font-size:19px}.programme-links{gap:12px}.programme-links .text-link{font-size:11px;gap:7px}.single-resource-toolbar{display:block}.single-resource-toolbar .text-link{margin-top:9px}}
 
-/* Keep all seven section links visible on a narrow screen. */
-@media(max-width:560px){
- .site-header #main-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 8px;overflow:visible;padding:2px 0 4px}
- .site-header #main-nav>a,.site-header #score-nav-toggle{justify-self:center;justify-content:center;min-height:42px;padding:10px 0;font-size:13px;white-space:nowrap}
+/* Give the timetable room before moving to the phone layout. Both days
+   still occupy the same grid area, so switching never resizes the artwork. */
+.schedule-overview { grid-template-columns: minmax(0, 48fr) minmax(0, 52fr); }
+.schedule-panel { padding: 44px clamp(28px, 4.5vw, 72px); }
+.schedule-day-tab { min-width: 0; min-height: 48px; }
+.schedule-day-tab span { font-size: 16px; }
+.schedule-day-tab small { font-size: 12px; }
+.schedule-edition, .schedule-notice { font-size: 14px; }
+.timetable-row { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; }
+.timetable-time { font-size: 14px; }
+.timetable-content h3 { font-size: 20px; overflow-wrap: anywhere; }
+.timetable-content p { font-size: 14px; line-height: 1.8; }
+.timetable-row.is-interval .timetable-content h3 { font-size: 15px; }
+.timetable-course-link { align-items: center; min-height: 44px; }
+.timetable-course-link span { font-size: 18px; }
+.schedule-panel > .light-link { min-height: 48px; font-size: 16px; }
+.programme-note { font-size: 15px; }
+.programme-day .timetable-time, .programme-day .timetable-content p { font-size: 14px; }
+.programme-links .text-link { min-height: 44px; font-size: 14px; }
+.single-resource-toolbar { font-size: 15px; }
+.single-resource-toolbar .text-link { min-height: 44px; font-size: 14px; }
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .schedule-panel { padding: 40px 28px; }
+  .timetable-row { grid-template-columns: 94px minmax(0, 1fr); gap: 12px; }
+  .timetable-content h3 { font-size: 19px; }
+  .schedule-day-tab { padding-inline: 10px; gap: 8px; }
 }
 
-/* Slightly larger section navigation and primary resource entry. */
-.site-header #main-nav>a,.site-header #score-nav-toggle{font-size:15px}
-.header-main .header-cta{font-size:15px}
-@media(max-width:860px){
- .site-header #main-nav{gap:clamp(8px,2vw,16px)}
- .site-header #main-nav>a,.site-header #score-nav-toggle{font-size:14px}
- .header-main .header-cta{font-size:14px}
-}
-@media(max-width:560px){
- .site-header #main-nav{gap:0 8px}
- .site-header #main-nav>a,.site-header #score-nav-toggle{font-size:14px;min-height:46px;padding:11px 0}
- .header-main .header-cta{font-size:13px}
+@media (max-width: 900px) {
+  .schedule-overview { display: grid; grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .schedule-panel { padding: 40px clamp(24px, 6vw, 54px); }
+  .schedule-panel h2 { font-size: 34px; }
+  .schedule-visual { min-height: 0; height: clamp(240px, 42vw, 380px); }
+  .schedule-visual > img { object-position: center 55%; }
+  .schedule-days { margin-top: 24px; }
+  .schedule-day-tab { justify-content: center; gap: 12px; }
+  .timetable-row { padding-block: 16px; }
 }
 
-@media(min-width:561px) and (max-width:650px){
- .schedule-day-tab{min-width:0;padding-left:6px;padding-right:6px;gap:6px}
+@media (max-width: 700px) {
+  .programme-days { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+  .programme-day .timetable-row { grid-template-columns: minmax(0, 1fr); gap: 5px; }
+  .programme-day .timetable-content h3 { font-size: 20px; }
+  .programme-links { gap: 10px 20px; }
+}
+
+@media (max-width: 560px) {
+  .schedule-panel { padding: 32px 24px; }
+  .schedule-panel h2 { font-size: 32px; }
+  .schedule-day-tab { padding: 12px 8px; gap: 8px; }
+  .schedule-day-tab span { font-size: 16px; }
+  .schedule-day-tab small { font-size: 12px; }
+  .timetable-row { grid-template-columns: minmax(0, 1fr); gap: 4px; padding-block: 14px; }
+  .timetable-time { font-size: 14px; }
+  .timetable-content h3 { font-size: 20px; }
+  .timetable-course-link { min-height: 44px; }
+  .schedule-visual { height: clamp(220px, 64vw, 300px); }
+  .single-resource-toolbar { display: block; }
+  .single-resource-toolbar .text-link { margin-top: 8px; }
 }

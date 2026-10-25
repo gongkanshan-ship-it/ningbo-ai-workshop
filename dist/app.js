@@ -47,6 +47,7 @@ window.workshopDialog = {
   element: dialog,
   get owner() { return dialogOwner; },
   show(title, kicker, content, owner = null) {
+    closeMobileNavigation();
     dialogOwner = owner;
     dialog.classList.toggle("resource-dialog", owner === "resources");
     document.getElementById("dialog-title").textContent = title;
@@ -111,4 +112,37 @@ function updateNavigation() {
 }
 window.addEventListener("scroll", () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(updateNavigation); }, { passive: true });
 window.addEventListener("resize", updateNavigation);
+updateNavigation();
+
+// Compact mobile navigation; keep all chapters accessible without shrinking text.
+const siteHeader = document.querySelector(".site-header");
+const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+const mobileNavigation = window.matchMedia("(max-width: 680px)");
+document.documentElement.classList.add("nav-enhanced");
+function closeMobileNavigation() {
+  siteHeader.classList.remove("navigation-open");
+  mobileMenuToggle.setAttribute("aria-expanded", "false");
+  mobileMenuToggle.setAttribute("aria-label", "展开导航");
+  closeScoreNavigation();
+  updateNavigation();
+}
+mobileMenuToggle.addEventListener("click", () => {
+  const open = !siteHeader.classList.contains("navigation-open");
+  siteHeader.classList.toggle("navigation-open", open);
+  mobileMenuToggle.setAttribute("aria-expanded", String(open));
+  mobileMenuToggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
+  if (!open) closeScoreNavigation();
+  updateNavigation();
+});
+siteHeader.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener("click", closeMobileNavigation));
+document.addEventListener("click", event => {
+  if (siteHeader.classList.contains("navigation-open") && !siteHeader.contains(event.target)) closeMobileNavigation();
+});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && siteHeader.classList.contains("navigation-open")) {
+    closeMobileNavigation();
+    mobileMenuToggle.focus();
+  }
+});
+mobileNavigation.addEventListener("change", closeMobileNavigation);
 updateNavigation();
