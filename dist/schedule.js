@@ -27,7 +27,7 @@
     return `<ol class="timetable-list">${day.entries.filter(entry => expanded || entry.featured !== false).map(entry => {
       const title = escapeHtml(entry.title), note = entry.note ? `<p>${escapeHtml(entry.note)}</p>` : "";
       const linkedTitle = entry.kind === "course" && !expanded ? `<a class="timetable-course-link" href="#course-${entry.courseId}" data-course-jump="${entry.courseId}">${title}<span aria-hidden="true">↗</span></a>` : title;
-      const links = entry.kind === "course" && expanded ? `<div class="programme-links">${resourceButton("材料", "materials", entry.courseId)}${resourceButton("配置", "software", entry.courseId)}<a class="text-link" href="#course-${entry.courseId}" data-course-jump="${entry.courseId}">课程介绍 <span aria-hidden="true">↗</span></a></div>` : "";
+      const links = entry.kind === "course" && expanded ? `<div class="programme-links">${resourceButton("配置", "software", entry.courseId)}<a class="text-link" href="#course-${entry.courseId}" data-course-jump="${entry.courseId}">课程介绍 <span aria-hidden="true">↗</span></a></div>` : "";
       return `<li class="timetable-row${entry.kind === "interval" ? " is-interval" : ""}"><span class="timetable-time">${escapeHtml(entry.time)}</span><div class="timetable-content"><h3>${linkedTitle}</h3>${note}${links}</div></li>`;
     }).join("")}</ol>`;
   }
@@ -72,12 +72,12 @@
       const response = await fetch("data/schedule.json", { cache: "no-store" });
       if (!response.ok) throw new Error("Programme unavailable");
       programme = validateProgramme(await response.json(), courses.map(course => course.id));
-      document.getElementById("schedule-edition").textContent = programme.status === "draft" ? "拟定课表 · 正式日期待公布" : "两天课表";
+      document.getElementById("schedule-edition").textContent = programme.status === "draft" ? "2026年11月7—8日 · 具体时间待公布" : "两天课表";
       dayTabs.innerHTML = programme.days.map((day, index) => `<button type="button" class="schedule-day-tab" role="tab" id="tab-${day.id}" data-day-index="${index}" aria-controls="panel-${day.id}" aria-selected="${index === 0}" tabindex="${index === 0 ? 0 : -1}"><span>${escapeHtml(day.label)}</span><small>DAY 0${index + 1}</small></button>`).join("");
       // Both days share one grid cell, so the longer day sets a stable height.
       dayPanel.innerHTML = programme.days.map(day => `<div class="timetable-day" id="panel-${day.id}" role="tabpanel" aria-labelledby="tab-${day.id}" aria-hidden="true" tabindex="-1" inert>${renderEntries(day)}</div>`).join("");
       selectDay(selectedDay);
-      document.getElementById("schedule-notice").textContent = programme.status === "draft" ? "完整课表含课后任务与休息安排" : "课表时间均为北京时间";
+      document.getElementById("schedule-notice").textContent = programme.status === "draft" ? "课程次序可能微调，以现场授课为准" : "课表时间均为北京时间";
       allButton.disabled = false;
     } catch (_) {
       programme = null;

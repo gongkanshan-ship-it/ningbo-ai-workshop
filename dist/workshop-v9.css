@@ -1,0 +1,50 @@
+/* First-cohort content, with the established Ningbo blue-and-white artwork. */
+.hero h1 { font-size:clamp(46px,5.5vw,76px); line-height:1.3; }
+.hero h1 br { display:none; }
+.hero h1 span { display:block; white-space:normal; font-size:clamp(30px,3.5vw,48px); line-height:1.5; margin-top:8px; }
+.hero-programme { max-width:40em; letter-spacing:.08em; }
+.hero-edition { margin-top:14px; font-size:19px; letter-spacing:.16em; color:var(--blue); }
+.event-meta { flex-wrap:wrap; gap:18px 38px; }
+.event-organizers { margin-top:22px; max-width:36em; color:#496b84; font-size:13px; line-height:1.9; }
+.hero-content { padding-top:60px; }
+.group-task-summary { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.4fr); gap:40px; padding:34px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.task-overview .eyebrow { color:var(--blue); font-size:11px; letter-spacing:.12em; }
+.task-overview h3 { font:clamp(25px,2.6vw,34px)/1.55 var(--serif); margin-top:14px; }
+.task-overview > p:last-child { margin-top:16px; color:var(--muted); font-size:15px; max-width:28em; }
+.task-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; align-items:start; }
+.task-facts > div { border-left:1px solid var(--line); padding-left:22px; min-width:0; }
+.task-facts strong { display:block; font:46px/1.25 Georgia,serif; color:var(--blue); }
+.task-facts small { display:block; font:14px/1.8 var(--sans); margin-top:8px; }
+.task-facts span { display:block; margin-top:14px; font-size:14px; line-height:1.9; color:var(--muted); }
+.task-focus { padding:24px 0 30px; border-bottom:1px solid var(--line); }
+.task-focus h3 { font-size:17px; margin-bottom:8px; }
+.task-focus p { font-size:15px; color:var(--muted); }
+.task-focus .task-submission { margin-top:12px; font-size:14px; }
+.roster-heading { display:flex; align-items:baseline; flex-wrap:wrap; gap:12px 24px; margin:36px 0 18px; }
+.roster-heading h3 { font:27px/1.5 var(--serif); }
+.roster-heading p { color:var(--muted); font-size:14px; }
+.schedule-day-tab { flex-wrap:wrap; gap:4px 10px; }
+.schedule-day-tab small { font-size:11px; }
+@media(max-width:1000px) { .group-task-summary { grid-template-columns:1fr; gap:30px; } .task-facts > div:first-child { padding-left:0; border-left:0; } }
+@media(max-width:680px) {
+  .hero-content { padding-top:34px; }
+  .hero h1 { font-size:clamp(40px,10.5vw,56px); }
+  .hero h1 span { font-size:clamp(27px,6.8vw,36px); letter-spacing:0; margin-top:10px; }
+  .hero .hero-programme { font-size:12px; line-height:1.8; letter-spacing:.02em; align-items:flex-start; }
+  .hero-programme .line { flex-shrink:0; margin-top:10px; width:20px; }
+  .hero-edition { font-size:17px; margin-top:12px; }
+  .hero-actions { margin-top:24px; }
+  .event-meta { gap:18px 24px; }
+  .event-meta strong { font-size:15px; }
+  .event-organizers { font-size:12px; max-width:29em; }
+  .group-task-summary { padding:24px 0; gap:26px; }
+  .task-facts { grid-template-columns:1fr; gap:0; }
+  .task-facts > div,.task-facts > div:first-child { display:grid; grid-template-columns:90px minmax(0,1fr); gap:16px; padding:18px 0; border-left:0; border-top:1px solid var(--line); }
+  .task-facts strong { font-size:36px; }
+  .task-facts small { margin-top:4px; font-size:13px; }
+  .task-facts span { font-size:15px; margin-top:0; align-self:center; }
+  .task-focus { padding:22px 0; }
+  .roster-heading { margin-top:28px; gap:6px; flex-direction:column; }
+  .schedule-day-tab span { font-size:15px; }
+  .schedule-day-tab small { display:none; }
+}

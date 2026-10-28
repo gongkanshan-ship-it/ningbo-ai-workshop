@@ -1,38 +1,23 @@
 "use strict";
+// Course titles and order follow the first-cohort training plan. Timings await publication.
 const courses = [
-  { id: "01", title: "认识你的 AI 工作台", subtitle: "WorkBuddy 初体验", duration: 60, software: "WorkBuddy", description: "从基础操作开始，熟悉 AI 工作台的使用方法，在法律场景中完成第一次体验。", preparation: "安装并登录 WorkBuddy；建立独立练习文件夹，确认能读取、生成并保存文件。" },
-  { id: "02", title: "大模型的聪明与幻觉", subtitle: "生成式人工智能基础", duration: 60, software: "课堂演示工具待讲师补充", description: "理解生成式人工智能的基本原理、幻觉形成原因、核验方法和使用边界，为后续实操建立判断依据。", preparation: "准备笔记本电脑；课堂演示工具与核验资料待讲师补充。" },
-  { id: "03", title: "把咨询经验写进 Skill", subtitle: "法律咨询技能制作", duration: 75, software: "WorkBuddy", description: "理解 Skill 的基本结构，把法律咨询中的经验写成规则，在具体场景中完成制作并学习迭代方法。", preparation: "完成 WorkBuddy 基础操作；本次入门课使用的短输入、操作卡及 Skill 资料待讲师补充。" },
-  { id: "04", title: "检索的加速度", subtitle: "MCP、知识库与 RAG 实战", duration: 60, software: "ima、WorkBuddy、元典 MCP", description: "认识 MCP、知识库与 RAG，理解数据获取与检索的关系，并在法律检索场景中练习使用。", preparation: "安装并登录 ima；准备 WorkBuddy，按后续操作指南接入元典 MCP。课堂知识库材料与具体接入步骤待补充。" },
-  { id: "05", title: "给 AI 立规矩", subtitle: "案件分析工作区构建", duration: 90, software: "WorkBuddy", description: "学习为工作区设置规则，拆解任务、组织案件分析流程，并对 AI 输出进行核验，让工作可以持续推进。", preparation: "准备独立工作区；确认可访问练习目录并保存输出。本次课堂选用的模拟案例与工作区模板待讲师补充。" },
-  { id: "06", title: "看懂 Agent", subtitle: "原理、产品与认知框架", duration: 45, software: "演示产品待讲师补充", description: "建立对 Agent 形态与产品的判断框架，串联六门课程的知识，形成带回工作中的后续行动。", preparation: "整理前五课的学习记录；演示产品与准备材料待讲师补充。" }
+  { id: "01", title: "认识你的 AI 工作台", subtitle: "Workbuddy 初体验与可视化实务", software: "WorkBuddy", description: "从工作台基础操作开始，在法律场景中完成首次体验，学习使用可视化组件表达成果。", preparation: "完成课前指引中的安装、登录与电脑环境检查。" },
+  { id: "02", title: "把管理经验写进 Skill", subtitle: "律所管理技能制作", software: "WorkBuddy", description: "学习 Skill 的基本结构与规则设计，将律所管理经验写成可用的技能，在场景制作中理解迭代方法和知识库应用。", preparation: "完成 WorkBuddy 基础操作，想好一个希望通过 AI 改善的律所管理场景。" },
+  { id: "03", title: "大模型的聪明与幻觉", subtitle: "生成式人工智能基础", software: "具体演示工具以授课安排为准", description: "理解大模型基本原理、幻觉形成、核验方法和使用边界，为实际应用建立判断依据。", preparation: "准备可联网的笔记本电脑，记录前两课使用过程中遇到的问题。" },
+  { id: "04", title: "给 AI 立规矩", subtitle: "案件分析工作区构建", software: "WorkBuddy、企查查 MCP", description: "学习工作区规则、任务拆解和外部数据接入，构建案件分析流程，并核验输出结果。", preparation: "按课前指引完成 WorkBuddy 与企查查连接器准备；课堂统一使用脱敏材料。" },
+  { id: "05", title: "看懂 Agent", subtitle: "原理、产品与认知框架", software: "演示产品以授课安排为准", description: "认识 Agent 形态，建立产品判断框架，串联各课内容，形成课后的应用行动。", preparation: "整理前四课的学习记录和小组实践问题。" }
 ];
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 document.getElementById("course-list").innerHTML = courses.map(course => `
-  <details class="course-row" id="course-${course.id}"><summary><span class="course-number">${course.id}</span><span class="course-title">${course.title}<small>${course.subtitle}</small></span><span class="course-duration">${course.duration} 分钟</span><span class="course-toggle" aria-hidden="true">＋</span></summary><div class="course-detail"><p>${course.description}</p><div class="course-resource"><div><span class="resource-label">使用软件</span><strong>${course.software}</strong></div><div><span class="resource-label">课前准备</span><p>${course.preparation}</p></div><div><span class="resource-label">材料下载</span><a class="text-link" href="downloads/course-${course.id}-preparation.txt" download>第 ${course.id} 课 · 课前准备说明 <span aria-hidden="true">↓</span></a></div><div><span class="resource-label">课堂材料</span><span class="pending-text">讲师课件与练习材料待补充</span></div></div></div></details>
+  <details class="course-row" id="course-${course.id}"><summary><span class="course-number">${course.id}</span><span class="course-title">${course.title}<small>${course.subtitle}</small></span><span class="course-duration">时长待公布</span><span class="course-toggle" aria-hidden="true">＋</span></summary><div class="course-detail"><p>${course.description}</p><div class="course-resource"><div><span class="resource-label">使用软件</span><strong>${course.software}</strong></div><div><span class="resource-label">课前准备</span><p>${course.preparation}</p></div></div></div></details>
 `).join("");
-const preparationItems = [
-  ["带好笔记本与电源", "确认设备可联网，预留存储空间。"],
-  ["完成 WorkBuddy、ima 安装与登录", "分别启动软件，确认账户可用。"],
-  ["准备元典 MCP", "按课程操作指南完成接入，并进行一次连接测试。"],
-  ["建立独立的练习文件夹", "将练习与日常工作分开，只使用公开或脱敏材料。"],
-  ["跑通一次最小操作", "读取材料 → 生成内容 → 保存文件 → 实际打开检查。"],
-  ["记录问题与报错", "保留系统版本、操作步骤及完整报错，便于技术组定位。"]
-];
-document.getElementById("preparation-list").innerHTML = preparationItems.map(([title, text], index) => `<li><span class="preparation-number">${String(index + 1).padStart(2, "0")}</span><div><strong>${title}</strong><p>${text}</p></div></li>`).join("");
 const official = {
   workbuddy: "https://www.workbuddy.cn/",
   win: "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Win-Guide",
   mac: "https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Installation-Mac-Guide",
-  ima: "https://ima.tencent.com/download",
-  mcp: "https://open.chineselaw.com/mcp-config/"
+  qcc: "https://agent.qcc.com/guide"
 };
 const externalLink = (url, label) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label} ↗</a>`;
-document.getElementById("system-cards").innerHTML = `
-  <article class="system-card"><span class="system-label">01 / WINDOWS</span><h3>Windows</h3><p class="system-baseline">Windows 10 及以上 · x64</p><ul><li>安装 WorkBuddy 与 ima。</li><li>Windows ARM 设备请提前联系技术组核验。</li></ul><div class="official-links">${externalLink(official.win, "WorkBuddy 安装指南")}${externalLink(official.ima, "ima 官方下载")}</div></article>
-  <article class="system-card"><span class="system-label">02 / MACOS</span><h3>Mac</h3><p class="system-baseline">macOS 12 及以上</p><ul><li>WorkBuddy：M 系列芯片选 ARM64；Intel 芯片选 X64。</li><li>ima 从官网下载 Mac 客户端。</li></ul><div class="official-links">${externalLink(official.mac, "WorkBuddy 安装指南")}${externalLink(official.ima, "ima 官方下载")}</div></article>
-  <article class="system-card"><span class="system-label">03 / HARMONYOS</span><h3>鸿蒙</h3><p class="system-baseline">课前完成设备适配测试</p><ul><li>WorkBuddy 已提供鸿蒙电脑版，ima 已提供鸿蒙客户端。</li><li>材料导入、Skill 运行和元典 MCP 连接需按本班流程测试。</li><li>最低系统版本及课堂兼容情况待核验。</li></ul><div class="official-links">${externalLink(official.workbuddy, "WorkBuddy 官方下载")}${externalLink(official.ima, "ima 官方下载")}</div></article>
-  <div class="mcp-setup"><strong>元典 MCP</strong><p>在支持 MCP 的授课工具内接入，具体账户配置与操作步骤将在课程指南中补充。</p>${externalLink(official.mcp, "官方 MCP 接入说明")}</div>`;
 
 const feedbackTemplate = "技术问题反馈\n系统及版本：\n工具及版本：\n我正在进行的操作：\n复现步骤：\n完整报错：\n截图：请另附（注意遮盖个人和客户信息）";
 document.getElementById("copy-support").addEventListener("click", async () => {
@@ -90,7 +75,7 @@ document.addEventListener("keydown", event => {
   }
 });
 const navLinks = [...document.querySelectorAll("#main-nav a, #score-nav-panel a")];
-const sectionOrder = ["home", "overview", "prepare", "courses", "groups", "rules", "scores", "score-history", "support"];
+const sectionOrder = ["home", "prepare", "overview", "courses", "groups", "rules", "scores", "score-history", "support"];
 const trackedSections = sectionOrder.map(id => document.getElementById(id));
 let scrollFrame;
 function updateNavigation() {
