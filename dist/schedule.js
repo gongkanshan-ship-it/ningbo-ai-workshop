@@ -67,12 +67,11 @@
     const courseLink = event.target.closest?.("[data-course-jump]");
     if (courseLink) { document.getElementById(`course-${courseLink.dataset.courseJump}`).open = true; window.workshopDialog.close(); }
   });
-  async function loadProgramme() {
+  function loadProgramme() {
     try {
-      const response = await fetch("data/schedule.json", { cache: "no-store" });
-      if (!response.ok) throw new Error("Programme unavailable");
-      programme = validateProgramme(await response.json(), courses.map(course => course.id));
-      document.getElementById("schedule-edition").textContent = programme.status === "draft" ? "2026年11月7—8日 · 具体时间待公布" : "两天课表";
+      // A classic data script also works when index.html is opened as a local file.
+      programme = validateProgramme(window.workshopScheduleData, courses.map(course => course.id));
+      document.getElementById("schedule-edition").textContent = programme.status === "draft" ? "2026年11月7—8日 · 具体起止钟点待公布" : "两天课表";
       dayTabs.innerHTML = programme.days.map((day, index) => `<button type="button" class="schedule-day-tab" role="tab" id="tab-${day.id}" data-day-index="${index}" aria-controls="panel-${day.id}" aria-selected="${index === 0}" tabindex="${index === 0 ? 0 : -1}"><span>${escapeHtml(day.label)}</span><small>DAY 0${index + 1}</small></button>`).join("");
       // Both days share one grid cell, so the longer day sets a stable height.
       dayPanel.innerHTML = programme.days.map(day => `<div class="timetable-day" id="panel-${day.id}" role="tabpanel" aria-labelledby="tab-${day.id}" aria-hidden="true" tabindex="-1" inert>${renderEntries(day)}</div>`).join("");
