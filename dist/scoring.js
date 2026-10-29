@@ -18,8 +18,15 @@
       return { ...result, total };
     });
   }
+  function compareStandings(a, b) {
+    return b.total - a.total || b.presentation - a.presentation || b.tasks - a.tasks || a.attendance - b.attendance;
+  }
+  // Keep exact ties equal; no extra tiebreak is defined by the scoring rules.
+  function sortScores(teams, item = "total") {
+    return [...teams].sort((a, b) => (item === "total" ? 0 : item === "attendance" ? a[item] - b[item] : b[item] - a[item]) || compareStandings(a, b));
+  }
   // The pure calculation is available to the local verification script without a browser.
-  if (typeof module !== "undefined" && module.exports) module.exports = { deriveScores };
+  if (typeof module !== "undefined" && module.exports) module.exports = { deriveScores, compareStandings, sortScores };
   if (typeof document === "undefined") return;
   const dialogApi = window.workshopDialog;
   if (!dialogApi || !document.getElementById("score-body")) return;
@@ -29,7 +36,7 @@
   const signedValue = (item, value) => `${item === "attendance" && value ? "−" : ""}${value}`;
   function renderScores() {
     const sort = document.getElementById("score-sort").value;
-    const sorted = [...teams].sort((a, b) => (sort === "attendance" ? a[sort] - b[sort] : b[sort] - a[sort]) || b.total - a.total || a.id.localeCompare(b.id));
+    const sorted = sortScores(teams, sort);
     document.getElementById("score-body").innerHTML = sorted.map((team, index) => `<tr><td>${String(index + 1).padStart(2, "0")}</td><td><button type="button" data-team="${escapeHtml(team.id)}" aria-label="查看${escapeHtml(team.name)}积分结果">${escapeHtml(team.name)} <span aria-hidden="true">↗</span></button></td><td>${team.tasks}</td><td>${team.collaboration}</td><td>${team.presentation}</td><td class="deduction-value">${signedValue("attendance", team.attendance)}</td><td>${team.total}</td></tr>`).join("");
     document.querySelectorAll("[data-team]").forEach(button => button.addEventListener("click", () => showTeam(button.dataset.team)));
   }
