@@ -6,21 +6,21 @@
   <meta name="theme-color" content="#edf5fa">
   <meta name="description" content="律所合伙人 AI 赋能专项研修班（第一期·领航班）：活动指南、课程日程、课前准备与小组积分。">
   <title>律所合伙人 AI 赋能专项研修班（第一期·领航班） · 宁波</title>
-  <link rel="stylesheet" href="styles.css?v=7">
-  <link rel="stylesheet" href="scoring.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="scoring.css?v=12">
   <link rel="stylesheet" href="schedule.css?v=8">
   <link rel="stylesheet" href="roster.css?v=8">
-  <link rel="stylesheet" href="responsive.css?v=8">
+  <link rel="stylesheet" href="responsive.css?v=12">
   <link rel="stylesheet" href="guide.css?v=11">
   <link rel="stylesheet" href="resources-v9.css?v=9">
   <link rel="stylesheet" href="workshop-v9.css?v=9">
-  <script src="app.js?v=9" defer></script>
+  <script src="app.js?v=12" defer></script>
   <script src="resources.js?v=9" defer></script>
   <script src="guide.js?v=10" defer></script>
   <script src="data/schedule.js?v=11" defer></script>
   <script src="schedule.js?v=11" defer></script>
   <script src="roster.js" defer></script>
-  <script src="scoring.js" defer></script>
+  <script src="scoring.js?v=12" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">跳至正文</a>
@@ -39,7 +39,6 @@
       <nav aria-label="积分中心分篇">
         <a href="#rules"><span>01</span><strong>积分规则</strong><small>了解各项如何计分</small></a>
         <a href="#scores"><span>02</span><strong>实时积分</strong><small>查看小组分项与排名</small></a>
-        <a href="#score-history"><span>03</span><strong>修改历史</strong><small>追溯每次变更与依据</small></a>
       </nav>
     </div>
   </header>
@@ -120,17 +119,15 @@
 
     <section class="section scores" id="scores" aria-labelledby="scores-title">
       <div class="section-heading"><div><p class="eyebrow">04 / TEAM PROGRESS</p><h2 id="scores-title">实时积分</h2></div><div class="score-status"><span class="demo-dot"></span><strong>虚拟演示数据</strong><p>尚未接入活动实时数据。</p></div></div>
-      <div class="score-toolbar"><p id="score-data-status" role="status">正在读取积分记录…</p><label>排序方式 <select id="score-sort"><option value="total">按总分</option><option value="tasks">按课堂作业</option><option value="collaboration">按课堂表现</option><option value="presentation">按成果展示</option><option value="attendance">按出勤扣分（少到多）</option></select></label><a class="text-link" href="#rules">积分规则 <span aria-hidden="true">↗</span></a><a class="text-link" href="#score-history">修改历史 <span aria-hidden="true">↗</span></a></div>
-      <p class="table-scroll-hint" id="score-scroll-hint">左右滑动查看全部分项 · 点击小组查看明细 <span aria-hidden="true">↔</span></p>
-      <div class="score-table-wrap" aria-describedby="score-scroll-hint" tabindex="0" role="region" aria-label="小组积分榜，可横向滚动"><table><caption class="sr-only">虚拟小组积分演示。总分为课堂作业加课堂表现加成果展示减出勤扣分。点击小组名称可查看明细。</caption><thead><tr><th scope="col">序号</th><th scope="col">小组</th><th scope="col">课堂作业</th><th scope="col">课堂表现</th><th scope="col">成果展示</th><th scope="col">出勤扣分</th><th scope="col">总分</th></tr></thead><tbody id="score-body"></tbody></table></div>
+      <div class="score-toolbar"><p id="score-data-status" role="status">正在读取积分结果…</p><label>排序方式 <select id="score-sort"><option value="total">按总分</option><option value="tasks">按课堂作业</option><option value="collaboration">按课堂表现</option><option value="presentation">按成果展示</option><option value="attendance">按出勤扣分（少到多）</option></select></label><a class="text-link" href="#rules">积分规则 <span aria-hidden="true">↗</span></a></div>
+      <p class="table-scroll-hint" id="score-scroll-hint">左右滑动查看全部分项 · 点击小组查看分项结果 <span aria-hidden="true">↔</span></p>
+      <div class="score-table-wrap" aria-describedby="score-scroll-hint" tabindex="0" role="region" aria-label="小组积分榜，可横向滚动"><table><caption class="sr-only">虚拟小组积分演示。总分为课堂作业加课堂表现加成果展示减出勤扣分。点击小组名称可查看分项结果。</caption><thead><tr><th scope="col">序号</th><th scope="col">小组</th><th scope="col">课堂作业</th><th scope="col">课堂表现</th><th scope="col">成果展示</th><th scope="col">出勤扣分</th><th scope="col">总分</th></tr></thead><tbody id="score-body"></tbody></table></div>
     </section>
 
-    <section class="section history-section" id="score-history" aria-labelledby="history-title"><div class="section-heading"><div><p class="eyebrow">05 / SCORE HISTORY</p><h2 id="history-title">积分修改历史</h2></div><span class="history-demo">虚拟演示记录</span></div><p class="history-description">逐笔展示修改前后分数、修改原因与依据，保留原记录。</p><div class="history-toolbar"><label>查看小组 <select id="history-team"><option value="all">全部小组</option></select></label><span id="history-count" role="status"></span></div><div id="history-list" class="history-list"></div><details class="initial-records"><summary>查看初次登记记录 <span aria-hidden="true">＋</span></summary><div id="initial-record-list"></div></details></section>
-
-    <section class="support section" id="support" aria-labelledby="support-title"><div class="support-lead"><p class="eyebrow">06 / WE ARE HERE TO HELP</p><h2 id="support-title">遇到问题，<br>先来这里。</h2><p>安装、登录、文件操作或积分疑问，<br>找到对应入口，让学习继续。</p><a class="text-link" href="#prepare">查看课前指引 <span aria-hidden="true">↗</span></a></div><div class="support-faq">
+    <section class="support section" id="support" aria-labelledby="support-title"><div class="support-lead"><p class="eyebrow">05 / WE ARE HERE TO HELP</p><h2 id="support-title">遇到问题，<br>先来这里。</h2><p>安装、登录、文件操作或积分疑问，<br>找到对应入口，让学习继续。</p><a class="text-link" href="#prepare">查看课前指引 <span aria-hidden="true">↗</span></a></div><div class="support-faq">
       <details><summary>软件安装或登录失败怎么办？<span aria-hidden="true">＋</span></summary><div><p>先检查网络连接，记录系统版本、软件版本、失败的操作步骤以及完整报错。现场可向技术组出示报错截图，便于快速定位。</p><button type="button" class="text-link" id="copy-support">复制问题反馈模板 <span aria-hidden="true">↗</span></button><p id="copy-status" class="small-note" role="status"></p><textarea id="support-template" hidden readonly aria-label="技术问题反馈模板"></textarea></div></details>
       <details><summary>课程资料在哪里领取？<span aria-hidden="true">＋</span></summary><div><p>全部课程材料将统一整理为一个 ZIP 压缩包，在“课程资料包”入口一键下载。目前资料包待发布。</p><button type="button" class="text-link" data-open-resources="materials" aria-haspopup="dialog">查看课程资料包 <span aria-hidden="true">↗</span></button></div></details>
-      <details><summary>小组积分有疑问，如何反馈？<span aria-hidden="true">＋</span></summary><div><p>请核对小组、课程或活动环节、分项得分，在公示后及时向班务组提出，附上作品或记录依据。班务组依据原始记录复核后统一更正，并保留原记录与更正说明。</p><a class="text-link" href="#score-history">查看积分修改历史 <span aria-hidden="true">↗</span></a><div class="lecturer-contacts"><h4>讲师联系方式</h4><p>各课程讲师姓名、联系方式：待补充。</p></div></div></details>
+      <details><summary>小组积分有疑问，如何反馈？<span aria-hidden="true">＋</span></summary><div><p>请核对小组、课程或活动环节、分项得分，在公示后及时向班务组提出，附上作品或记录依据。班务组核实后统一更新公示结果。</p><div class="lecturer-contacts"><h4>讲师联系方式</h4><p>各课程讲师姓名、联系方式：待补充。</p></div></div></details>
       <details><summary>时间、地点与现场联系人在哪里看？<span aria-hidden="true">＋</span></summary><div><p>培训时间为 2026 年 11 月 7—8 日，具体场地待正式通知。班务联系人：董远航（18616366112）；技术联系人：上官明泓（13967892069）。培训期间统一安排午餐，住宿自理。</p></div></details>
     </div></section>
   </main>

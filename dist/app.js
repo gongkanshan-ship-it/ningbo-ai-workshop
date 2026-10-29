@@ -75,7 +75,7 @@ document.addEventListener("keydown", event => {
   }
 });
 const navLinks = [...document.querySelectorAll("#main-nav a, #score-nav-panel a")];
-const sectionOrder = ["home", "prepare", "overview", "courses", "groups", "rules", "scores", "score-history", "support"];
+const sectionOrder = ["home", "prepare", "overview", "courses", "groups", "rules", "scores", "support"];
 const trackedSections = sectionOrder.map(id => document.getElementById(id));
 let scrollFrame;
 function updateNavigation() {
@@ -89,7 +89,7 @@ function updateNavigation() {
     if (active) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
   });
-  const scoreActive = ["rules", "scores", "score-history"].includes(activeSection.id);
+  const scoreActive = ["rules", "scores"].includes(activeSection.id);
   scoreNavToggle.classList.toggle("active", scoreActive);
   if (scoreActive) scoreNavToggle.setAttribute("aria-current", "location");
   else scoreNavToggle.removeAttribute("aria-current");

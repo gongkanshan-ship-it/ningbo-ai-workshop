@@ -13,13 +13,13 @@ main, section, .course-title, .course-detail, .prepare-content,
 .header-main .header-cta { font-size:16px; }
 .section, .system-section { padding-inline:max(6%,calc((100% - 1320px)/2)); }
 .course-detail, .course-resource p, .preparation-list p, .system-card ul,
-.support-faq details > div, .history-entry > p { overflow-wrap:anywhere; }
+.support-faq details > div{ overflow-wrap:anywhere; }
 .course-title small, .course-duration, .course-resource .resource-label,
 .pending-text, .download-label { font-size:14px; }
 .course-detail, .course-resource strong, .course-resource .text-link,
 .preparation-list p, .system-baseline, .system-card ul,
 .official-links, .mcp-setup, .support-lead p:not(.eyebrow),
-.support-faq details > div, .history-description { font-size:15px; }
+.support-faq details > div{ font-size:15px; }
 .preparation-list strong, .operation-guides h4, .support-faq summary { font-size:17px; }
 .operation-guides > div, .download-actions .text-link, .resource-bundle p,
 .resource-summary, .configuration-list, .pending-files li { font-size:14px; }
@@ -32,23 +32,16 @@ main, section, .course-title, .course-detail, .prepare-content,
 .dialog-top { position:sticky; top:-1px; z-index:2; background:var(--paper); padding:5px 0; }
 .resource-dialog .dialog-top { top:-1px; }
 .score-toolbar { flex-wrap:wrap; }
-.score-toolbar select, .history-toolbar select, textarea { font-size:16px; min-height:44px; }
+.score-toolbar select, textarea { font-size:16px; min-height:44px; }
 .score-toolbar select { max-width:100%; }
 .score-toolbar label { flex-wrap:wrap; }
-.score-toolbar .text-link, .score-toolbar > p, .score-toolbar label,
-.history-toolbar, .history-toolbar > span { font-size:14px; }
+.score-toolbar .text-link, .score-toolbar > p, .score-toolbar label{ font-size:14px; }
 .score-table-wrap { max-width:100%; overscroll-behavior-x:contain; -webkit-overflow-scrolling:touch; }
 .score-table-wrap table { min-width:700px; }
 .score-table-wrap th, .score-table-wrap td, .score-table-wrap td button { font-size:15px; }
 .score-table-wrap td button { min-height:44px; }
 .score-table-wrap td:last-child { font-size:26px; }
 .table-scroll-hint { display:none; color:var(--muted); font-size:13px; margin:10px 0; }
-.history-entry > p, .history-entry-footer, .initial-record { font-size:14px; }
-.history-entry-meta, .history-entry > p > strong, .history-entry-footer .text-link,
-.initial-record .text-link, .initial-record > div > span { font-size:13px; }
-.initial-record { flex-wrap:wrap; }
-.initial-record > div { min-width:0; overflow-wrap:anywhere; }
-.evidence-detail dl > div, .evidence-detail p { font-size:14px; }
 
 @media (max-width:1000px) {
   .score-toolbar > p { flex-basis:100%; }
@@ -146,17 +139,6 @@ main, section, .course-title, .course-detail, .prepare-content,
   .course-resource .text-link { font-size:15px; padding:8px 0; }
   .score-toolbar label { flex-basis:100%; gap:10px; }
   .score-toolbar select { flex:1; min-width:0; }
-  .history-toolbar { align-items:flex-start; gap:12px; flex-direction:column; }
-  .history-entry-meta { flex-wrap:wrap; gap:6px 18px; }
-  .history-entry-main { align-items:flex-start; flex-direction:column; gap:12px; }
-  .history-entry h3 { font-size:24px; }
-  .history-entry > p { display:block; font-size:15px; }
-  .history-entry > p > strong { display:block; margin:14px 0 4px; }
-  .history-entry-footer { display:flex; align-items:flex-start; flex-direction:column; gap:8px; }
-  .history-entry-footer .text-link { margin-left:0; }
-  .initial-record { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px 14px; }
-  .initial-record > div { grid-column:1 / -1; }
-  .initial-record .text-link { justify-self:end; }
   dialog, .resource-dialog { width:calc(100% - 24px); max-height:calc(100svh - 24px); padding:16px 20px 24px; }
   .resource-dialog h2, dialog h2 { font-size:28px; }
   .resource-bundle { display:block; padding:16px; }
@@ -167,7 +149,6 @@ main, section, .course-title, .course-detail, .prepare-content,
   .resource-grid { gap:28px; }
   .resource-file { gap:10px; }
   .pending-files li { gap:12px; }
-  .evidence-detail dl > div { grid-template-columns:72px minmax(0,1fr); gap:10px; }
   .support-faq summary { padding:20px 0; }
   .support-faq details > div { padding-right:0; }
   footer { display:flex; flex-wrap:wrap; padding:32px 24px; gap:20px; }
