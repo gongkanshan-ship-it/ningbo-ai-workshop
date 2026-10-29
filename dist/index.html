@@ -7,19 +7,20 @@
   <meta name="description" content="律所合伙人 AI 赋能专项研修班（第一期·领航班）：活动指南、课程日程、课前准备与小组积分。">
   <title>律所合伙人 AI 赋能专项研修班（第一期·领航班） · 宁波</title>
   <link rel="stylesheet" href="styles.css?v=12">
-  <link rel="stylesheet" href="scoring.css?v=13">
+  <link rel="stylesheet" href="scoring.css?v=14">
   <link rel="stylesheet" href="schedule.css?v=8">
   <link rel="stylesheet" href="roster.css?v=8">
   <link rel="stylesheet" href="responsive.css?v=12">
   <link rel="stylesheet" href="guide.css?v=11">
   <link rel="stylesheet" href="resources-v9.css?v=9">
-  <link rel="stylesheet" href="workshop-v9.css?v=9">
+  <link rel="stylesheet" href="workshop-v9.css?v=14">
   <script src="app.js?v=12" defer></script>
   <script src="resources.js?v=9" defer></script>
   <script src="guide.js?v=10" defer></script>
   <script src="data/schedule.js?v=11" defer></script>
   <script src="schedule.js?v=11" defer></script>
-  <script src="roster.js" defer></script>
+  <script src="data/roster.js?v=14" defer></script>
+  <script src="roster.js?v=14" defer></script>
   <script src="scoring.js?v=13" defer></script>
 </head>
 <body>
@@ -31,7 +32,7 @@
       <a href="#prepare">课前指引</a>
       <a href="#overview">课程安排</a>
       <a href="#courses">课程介绍</a>
-      <a href="#groups">小组与任务</a>
+      <a href="#groups">组员名单</a>
       <button id="score-nav-toggle" type="button" aria-expanded="false" aria-controls="score-nav-panel">积分中心 <span class="nav-chevron" aria-hidden="true">⌄</span></button>
       <a href="#support">现场帮助</a>
     </nav>
@@ -80,13 +81,7 @@
     </section>
 
     <section class="section roster-section" id="groups" aria-labelledby="groups-title">
-      <div class="section-heading"><div><p class="eyebrow">PEOPLE / OUR LEARNING GROUPS</p><h2 id="groups-title">小组与任务</h2></div><p class="roster-intro">学员姓名 · 所在律所</p></div>
-      <div class="group-task-summary" aria-label="小组任务说明">
-        <div class="task-overview"><p class="eyebrow">LEARN TOGETHER · BUILD TOGETHER</p><h3>把一个实际问题，<br>做成一个可用的 Skill。</h3><p>开营时公布小组任务。各组自行选择应用场景和制作方向，贯穿两天研修完成。</p></div>
-        <div class="task-facts"><div><strong>10<small>人 / 组</small></strong><span>开营时选举组长，每组配备 1 名观察员</span></div><div><strong>1<small>个 Skill</small></strong><span>每组最终提交 1 个成果作品，应用场景不限于法律咨询</span></div><div><strong>15<small>分钟 / 组</small></strong><span>原则上展示 10 分钟、评委提问 5 分钟；具体以现场安排为准</span></div></div>
-      </div>
-      <div class="task-focus"><h3>成果展示关注什么</h3><p>应用价值 · 结构规则 · 运行效果 · 边界意识</p><p class="task-submission">提交方式与展示顺序将在开营时公布。</p></div>
-      <div class="roster-heading"><h3>本期小组名册</h3><p>查看组员姓名与所在律所</p></div>
+      <div class="section-heading"><div><p class="eyebrow">PEOPLE / OUR LEARNING GROUPS</p><h2 id="groups-title">组员名单</h2></div><p class="roster-intro">分组结果 · 姓名 · 律所</p></div>
       <div class="roster-toolbar" id="roster-toolbar" hidden>
         <label class="roster-search-label" for="roster-search"><span>查找学员</span><input id="roster-search" type="search" placeholder="输入姓名或律所" autocomplete="off"></label>
         <label class="roster-group-label" for="roster-group"><span>查看小组</span><select id="roster-group"><option value="all">全部小组</option></select></label>
@@ -101,77 +96,20 @@
 
     <section class="section rules-section" id="rules" aria-labelledby="rules-title">
       <div class="section-heading"><div><p class="eyebrow">03 / SCORING RULES</p><h2 id="rules-title">积分规则</h2></div><p class="rules-source">以组计分 · 每半天更新</p></div>
-      <p class="rules-intro">本期 60 人，共 6 组，每组 10 人。积分用于小组最终排名；第一名小组的每位组员均可获得一份 AI 相关伴手礼。</p>
+      <p class="rules-intro">6 组，每组 10 人。以小组总分排名，第一名每位组员获一份 AI 相关伴手礼。</p>
       <div class="score-formula" aria-label="小组总分等于两次作业分加课堂表现分加成果展示分减出勤扣分"><span>小组总分</span><b>＝</b><span>两次作业分</span><b>＋</b><span>课堂表现分</span><b>＋</b><span>成果展示分</span><b>−</b><span>出勤扣分</span></div>
       <div class="scoring-rule-grid">
-        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>到座考勤</h3><span class="rule-nature">逐课核对</span></div><p>每节课开课 <strong>10 分钟后</strong>仍未到座，每人扣所在小组 <strong>1 分</strong>。同一学员同一课次不重复扣分；同一课次多次短暂离场暂不累计计罚。</p><div class="rule-owner"><span>核对记录</span>本组观察员</div></article>
-        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>两次课堂作业</h3><span class="rule-nature">每项最高 22 分</span></div><p><strong>可视化课、工作区课各一次。</strong>每项作业分＝完成分＋质量分。全员完成得 10 分，少 1 人提交减 1 分；质量成绩按 6 组排名依次加 <strong>12、10、8、6、4、2 分</strong>。两次作业分别计算后相加。</p><div class="rule-owner"><span>评分主体</span>当堂授课老师</div></article>
-        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>课堂表现</h3><span class="rule-nature">有效互动 +1</span></div><p><strong>回答问题、提出问题、补充讨论</strong>三类互动，经认定有效，每次加所在小组 1 分。同组多人共同完成一次互动，只计 1 分；仅举手、简单附和或无新增内容的重复不计分。</p><div class="rule-owner"><span>认定主体</span>授课老师、考勤老师、观察员</div></article>
-        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>Skill 成果展示</h3><span class="rule-nature">一次展示</span></div><p>按应用价值、结构规则、运行效果、边界意识评分，每维 0—5 分，原始满分 20 分。按展示成绩排名依次计 <strong>16、12、9、7、5、3 分</strong>，原始评分不再另加。</p><div class="rule-owner"><span>评分主体</span>评审老师</div></article>
+        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>到座考勤</h3><span class="rule-nature">逐课核对</span></div><p>每课开课 <strong>10 分钟后</strong>仍未到座，每人扣小组 <strong>1 分</strong>。同人同课只扣一次；多次短暂离场暂不累计。</p><div class="rule-owner"><span>核对记录</span>本组观察员</div></article>
+        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>两次课堂作业</h3><span class="rule-nature">每项最高 22 分</span></div><p><strong>可视化课、工作区课各一次。</strong>每次＝完成分＋质量分。全员完成得 10 分，少 1 人提交减 1 分；质量排名依次加 <strong>12、10、8、6、4、2 分</strong>。</p><div class="rule-owner"><span>评分主体</span>当堂授课老师</div></article>
+        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>课堂表现</h3><span class="rule-nature">有效互动 +1</span></div><p><strong>回答、提问、补充讨论</strong>，经认定有效每次加小组 <strong>1 分</strong>。同组共同完成一次只计 1 分；仅举手或无新增内容的重复不计分。</p><div class="rule-owner"><span>认定主体</span>授课老师、考勤老师、观察员</div></article>
+        <article class="scoring-rule-card"><div class="scoring-rule-heading"><h3>Skill 成果展示</h3><span class="rule-nature">一次展示</span></div><p>由评审老师评分，按 6 组展示成绩排名依次计 <strong>16、12、9、7、5、3 分</strong>。原始评分不再另加。</p><div class="rule-owner"><span>评分主体</span>评审老师</div></article>
       </div>
       <div class="rules-guidance">
-        <details class="rules-disclosure" id="rules-tasks"><summary>两次作业：完成分与质量评分 <span aria-hidden="true">＋</span></summary><div class="rules-detail"><h4>完成分</h4>
-<p>每项作业全员完成得10分，少1人提交减1分。</p>
-<h4>质量分</h4>
-<p>作业由当堂授课老师直接评分，质量评价参考成果展示的应用价值、结构规则、运行效果、边界意识四个维度。每个维度按0—5分评价，四项相加，质量原始总分满分20分。作业按小组计算人均质量成绩，再按6组成绩排名取得质量分：</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="质量成绩名次 / 第一名 / 第二名 / 第三名 / 第四名 / 第五名 / 第六名，可横向滚动"><table><thead><tr><th scope="col">质量成绩名次</th><th scope="col">第一名</th><th scope="col">第二名</th><th scope="col">第三名</th><th scope="col">第四名</th><th scope="col">第五名</th><th scope="col">第六名</th></tr></thead><tbody><tr><td>质量分</td><td>12</td><td>10</td><td>8</td><td>6</td><td>4</td><td>2</td></tr></tbody></table></div>
-<p>用于评定作业质量的原始成绩只用于确定质量名次，不再作为另一笔积分计入小组总分。</p>
-<h4>每项作业分</h4>
-<p><strong>每项作业分＝该项完成分＋该项质量分。</strong></p>
-<p>例如：某项作业全组10人均完成，完成分为10分；质量成绩排名第二，质量分为10分；该组本项作业共得20分。若少1人提交，完成分为9分，质量成绩仍排名第二，则该项作业得19分。</p>
-<p>每项作业最高得22分。各项作业分别计分。</p>
-<h4>质量评价标准</h4>
-<p>当堂授课老师参考成果展示的四个维度，结合本课任务目标直接评价作业质量：</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="评价维度 / 课堂作业中的观察重点，可横向滚动"><table><thead><tr><th scope="col">评价维度</th><th scope="col">课堂作业中的观察重点</th></tr></thead><tbody><tr><td>应用价值</td><td>是否回应本课布置的具体任务，形成的内容或成果对指定场景是否有用。</td></tr><tr><td>结构规则</td><td>思路和步骤是否清楚，输入要求、处理办法及输出形式是否与任务相符。</td></tr><tr><td>运行效果</td><td>是否实际完成要求的任务，结果是否准确、完整；实操作业是否有可核对的执行过程与结果。</td></tr><tr><td>边界意识</td><td>是否识别材料缺失、不确定信息及适用限制，是否说明需要人工核验的内容。</td></tr></tbody></table></div>
-<p>四个维度的具体要求应与本课作业目标相适应，不要求每项课堂练习都达到结业展示作品的完整程度。同一项作业的6个小组适用相同标准。</p>
-<p>建议当堂授课老师在布置作业时一并说明任务要求、完成条件、提交截止时间和具体评分观察点。个人作业成绩与小组人均质量成绩的具体计算办法，以及补交对积分的影响，另行明确。小组共同作品与个人任务汇总采用何种评价方式，应在任务布置时明确。</p></div></details>
-        <details class="rules-disclosure" id="rules-interaction"><summary>课堂互动：哪些可以计分 <span aria-hidden="true">＋</span></summary><div class="rules-detail"><h4>三类有效互动</h4>
-<p>有效互动分为回答问题、提出问题、补充讨论三类。每次有效互动加所在小组1分，由当堂授课老师、考勤老师和观察员认定。</p>
-<p>有效互动应与当堂课程或任务直接相关，表达了明确内容，并对解答问题、理解知识或完成任务产生实际帮助。</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="类型 / 具体认定标准 / 可以计分的例子 / 不单独计分的情形，可横向滚动"><table><thead><tr><th scope="col">类型</th><th scope="col">具体认定标准</th><th scope="col">可以计分的例子</th><th scope="col">不单独计分的情形</th></tr></thead><tbody><tr><td>回答问题</td><td>回应老师提出的问题，核心结论正确，或提出符合题意且理由清楚的合理方案。开放性问题不要求与老师的示例答案一致。</td><td>说明为什么需要增加一项输入要求，并解释缺少该信息会怎样影响结果。</td><td>简单附和；复述已有答案且无新增内容；明显错误且未完成实质纠正的回答。</td></tr><tr><td>提出问题</td><td>问题具体、表意清楚，指向需要澄清的知识点、适用条件或实际操作困难。基础问题也可计分。</td><td>说明自己在哪一步遇到什么结果，并明确提出需要澄清的问题。</td><td>与课程无关的问题；重复已经回答的问题且没有新的疑点。</td></tr><tr><td>补充讨论</td><td>提供讨论中尚未出现的案例、理由、方法、适用边界或有依据的纠错意见，实质补充或修正已有讨论。</td><td>指出示例遗漏了必要材料，或者提出另一种适用场景并说明差别。</td><td>仅表示赞同；换一种说法重复现有内容；没有实质内容的接话。</td></tr></tbody></table></div>
-<p>仅举手或表示愿意参与不计分。不以提问难度或表达熟练程度作为计分门槛。</p>
-<h4>一次互动的范围</h4>
-<p>同组多人共同完成一次回答、提问或补充讨论，只计1分，不按发言人数叠加。</p>
-<p>为形成一个完整答案而连续回答、组内补充，或回应老师为补全该答案提出的追问，合并为一次互动。老师提出新的独立问题，或认可出现独立的新问题、新贡献，可以另计一次。</p>
-<p>不同小组分别作出符合标准的独立贡献，可以各计一次；后发言的小组仅重复已有内容，不再计分。</p>
-<h4>认定与课次记录</h4>
-<p>当堂授课老师主要判断内容是否符合有效互动标准；考勤老师和观察员结合现场情况核对参与小组、互动次数及是否重复。出现分歧时，三方依据现场情况共同明确。</p>
-<p>观察员每节课记录、汇总本组有效互动及相应积分，每半天统一更新到网站。操作展示本身不单独设为一种互动计分类型。</p></div></details>
-        <details class="rules-disclosure" id="rules-presentation"><summary>Skill 成果展示：四个维度如何评分 <span aria-hidden="true">＋</span></summary><div class="rules-detail"><h4>评分与名次积分</h4>
-<p>Skill 课成果展示由评审老师打分，暂按应用价值、结构规则、运行效果、边界意识四个维度评价，每个维度0—5分，四项相加，原始总分满分20分。</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="评价维度 / 应用价值 / 结构规则 / 运行效果 / 边界意识 / 原始总分，可横向滚动"><table><thead><tr><th scope="col">评价维度</th><th scope="col">应用价值</th><th scope="col">结构规则</th><th scope="col">运行效果</th><th scope="col">边界意识</th><th scope="col">原始总分</th></tr></thead><tbody><tr><td>评分范围</td><td>0—5分</td><td>0—5分</td><td>0—5分</td><td>0—5分</td><td>0—20分</td></tr></tbody></table></div>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="展示成绩名次 / 第一名 / 第二名 / 第三名 / 第四名 / 第五名 / 第六名，可横向滚动"><table><thead><tr><th scope="col">展示成绩名次</th><th scope="col">第一名</th><th scope="col">第二名</th><th scope="col">第三名</th><th scope="col">第四名</th><th scope="col">第五名</th><th scope="col">第六名</th></tr></thead><tbody><tr><td>成果展示分</td><td>16</td><td>12</td><td>9</td><td>7</td><td>5</td><td>3</td></tr></tbody></table></div>
-<p>评审老师给出的展示原始成绩用于确定名次；计入小组总分的是名次积分表对应的成果展示分，不再另加原始成绩。多名评审老师成绩的合成方式另行确定。</p>
-<h4>应用价值 是否解决了一个明确的工作问题</h4>
-<p><strong>具体看四件事：</strong></p>
-<ol><li>使用对象是否清楚：谁会使用这个Skill，例如接待律师、办案律师或律所行政人员。</li><li>使用场景是否具体：在什么工作环节使用，当前遇到的是哪一个问题，而非泛泛地声称“提高效率”。</li><li>交付结果是否有用：最终形成什么材料或结果，使用者拿到后能完成哪一步工作。</li><li>改善是否说得清楚：与原来的做法相比，减少了哪些整理、查找或重复输入，降低了什么遗漏；不要求编造节省时间或准确率数字。</li></ol>
-<p><strong>评审可追问：</strong>“谁在什么时候用？原来最费力的是哪一步？运行后得到什么，下一步怎么用？”</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="表现层次 / 判断依据，可横向滚动"><table><thead><tr><th scope="col">表现层次</th><th scope="col">判断依据</th></tr></thead><tbody><tr><td>较好</td><td>使用人、具体问题、输出成果和后续用途均清楚，能对照原做法说明实际改善。</td></tr><tr><td>一般</td><td>能说清场景和产物，但改善在哪里、结果如何接入后续工作还不够明确。</td></tr><tr><td>不足</td><td>主要介绍工具功能或概念，难以说明具体使用人、需要解决的问题和结果用途。</td></tr></tbody></table></div>
-<h4>结构规则 其他人能否按清楚的步骤使用</h4>
-<p><strong>具体看四件事：</strong></p>
-<ol><li>输入要求是否明确：需要提交哪些文字、文件或字段，各输入分别用于什么。</li><li>处理步骤是否清楚：先做什么、再做什么，步骤之间能否衔接；不能只有“请认真分析”等笼统要求。</li><li>输出要求是否明确：输出哪些栏目、采用什么格式、需要达到什么具体要求，有无可对照的模板或示例。</li><li>使用说明是否足够：组外人员能否根据说明完成启动、提供输入并找到结果；是否必须依赖制作者现场补充大量口头说明。</li></ol>
-<p><strong>评审可查看：</strong>Skill中的任务说明、输入清单、处理步骤、输出模板及必要的使用说明。文件数量和提示词长度本身不作为优劣标准。</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="表现层次 / 判断依据，可横向滚动"><table><thead><tr><th scope="col">表现层次</th><th scope="col">判断依据</th></tr></thead><tbody><tr><td>较好</td><td>输入、步骤、输出和使用说明形成完整流程，组外人员基本能够照着操作。</td></tr><tr><td>一般</td><td>已有主要流程，但关键输入、某个步骤或输出要求需要制作者进一步解释。</td></tr><tr><td>不足</td><td>主要依赖一段笼统指令，步骤或输出要求不清，难以稳定复用。</td></tr></tbody></table></div>
-<h4>运行效果 实际运行后是否得到符合要求的结果</h4>
-<p><strong>具体看四件事：</strong></p>
-<ol><li>有没有真实运行依据：能够展示从输入、执行到输出的完整过程，或可核对的既有运行记录，不能只展示设想或成品封面。</li><li>输出是否达到本组自己设定的任务要求：应有栏目是否齐全、内容是否对应输入、结论或整理结果是否存在明显遗漏或错误。</li><li>换一份正常输入后是否仍可使用：通过另一份样例或评审指定的简单变化，观察规则能否继续发挥作用，而非只适配一个预先准备好的答案。</li><li>遇到问题后能否说明并处理：能够指出未达到要求的地方，说明如何定位和修改；区分已经验证的效果与尚未完成的部分。</li></ol>
-<p><strong>评审可查看：</strong>输入样例、运行过程、实际输出及第二次运行或修改后的结果。现场网络等条件影响演示时，可查看事先留存的完整过程与对应输出，按能够核验的实际效果评价。</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="表现层次 / 判断依据，可横向滚动"><table><thead><tr><th scope="col">表现层次</th><th scope="col">判断依据</th></tr></thead><tbody><tr><td>较好</td><td>有完整运行依据，主要结果符合任务要求，另一份正常输入也能得到可用结果，能够说明已知问题。</td></tr><tr><td>一般</td><td>已完成一次运行并形成部分可用结果，但仍有明显需要人工补齐的内容，或对换输入后的表现缺少验证。</td></tr><tr><td>不足</td><td>尚无完整运行依据，或主要结果不能完成所声明的任务，且未能说明如何修正。</td></tr></tbody></table></div>
-<h4>边界意识 能否识别不该直接交给AI决定的部分</h4>
-<p><strong>具体看四件事：</strong></p>
-<ol><li>适用范围是否明确：说明适合处理哪些任务，哪些情况不能直接使用，不能宣称能够解决所有同类问题。</li><li>信息不足时如何处理：缺少必要材料、存在矛盾或无法核实的信息时，应提示缺项、提出问题或保留待确认，不能自行补造事实；区分输入者陈述、材料直接记载和模型推测，不把转述直接写成已确认事实。</li><li>人工复核是否具体：明确哪些内容需要由人核对、依据是什么、什么时候确认；只写“结果仅供参考”不足以说明复核责任。</li><li>材料使用是否有边界：演示使用模拟或脱敏材料；说明实际使用时哪些信息需要去除、哪些内容不宜直接输入外部工具。</li></ol>
-<p><strong>评审可追问或查看：</strong>“少一项关键材料会怎样？两段信息互相矛盾会怎样？最后由谁核对哪些内容？”结合一份缺少关键信息的输入，观察是否给出相应提示。</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="表现层次 / 判断依据，可横向滚动"><table><thead><tr><th scope="col">表现层次</th><th scope="col">判断依据</th></tr></thead><tbody><tr><td>较好</td><td>明确适用范围、信息缺失处理、具体人工核验点及材料使用限制，并能用例子说明。</td></tr><tr><td>一般</td><td>已注意风险并提出提醒，但缺少具体触发条件、处理动作或核验内容。</td></tr><tr><td>不足</td><td>把AI输出直接作为可用结论；缺少材料时仍补写事实；或只有笼统免责声明而无实际处理办法。</td></tr></tbody></table></div>
-<h4>用同一个作品理解四个维度</h4>
-<p>以“首次咨询接待记录与待补材料清单Skill”为例：</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="维度 / 具体评价什么，可横向滚动"><table><thead><tr><th scope="col">维度</th><th scope="col">具体评价什么</th></tr></thead><tbody><tr><td>应用价值</td><td>是否解决接待律师需要把零散叙述整理成记录、明确下一步补充材料的问题；产物是否便于继续访谈或交接。</td></tr><tr><td>结构规则</td><td>是否写清需要输入的叙述和材料，按什么顺序整理，最终输出哪些栏目，以及组外人员如何使用。</td></tr><tr><td>运行效果</td><td>给一份模拟接待材料后，是否实际生成对应记录与清单，是否漏掉材料中已有的重要信息；换一份材料后是否仍可用。</td></tr><tr><td>边界意识</td><td>材料没有日期时是否标为待确认，叙述矛盾时是否提出核实问题，是否明确由律师核对；演示是否使用模拟或脱敏材料。</td></tr></tbody></table></div>
-<p>四个维度分别评价用途、设计、实际结果和使用边界。评审应指出具体依据，每个问题确定主要归属，不机械地跨维度重复扣分：</p>
-<div class="rules-table-wrap" tabindex="0" role="region" aria-label="发现的问题 / 主要评价维度，可横向滚动"><table><thead><tr><th scope="col">发现的问题</th><th scope="col">主要评价维度</th></tr></thead><tbody><tr><td>流程设计完整，但产物对所述工作问题没有明显帮助</td><td>应用价值</td></tr><tr><td>没有说明怎样从信息缺口生成待补材料清单</td><td>结构规则</td></tr><tr><td>已有对应规则，但实际运行漏列了材料中明确记载的信息</td><td>运行效果</td></tr><tr><td>材料未提供关键日期，输出却自行编出一个日期</td><td>边界意识</td></tr></tbody></table></div>
-<p>口才、页面美观或技术复杂程度不单独作为加分依据。</p></div></details>
-        <details class="rules-disclosure" id="rules-attendance"><summary>出勤核对与小组配合 <span aria-hidden="true">＋</span></summary><div class="rules-detail"><p>开课时间以课程安排公布或授课老师当场明确的时间为准。每课开课 10 分钟后，由观察员核对到座情况。同一学员不同课次分别计算，同一课次只记一次考勤扣分。</p><ul><li>开营时各组自行选举组长，每组配置 1 名观察员。</li><li>课堂作业以小组为单位提交；组员完成个人任务后交由组长汇总。</li><li>保留必要的操作过程、作业及成果文件，积极参与讨论、互动和成果展示。</li></ul></div></details>
-        <details class="rules-disclosure" id="rules-publication" open><summary>同分排序与积分公示 <span aria-hidden="true">＋</span></summary><div class="rules-detail"><p><strong>总积分相同时，依次比较：</strong></p><ol class="rules-tiebreak"><li>成果展示积分，高者优先。</li><li>两次作业积分合计（完成分＋质量分），高者优先。</li><li>累计考勤扣分，少者优先。</li></ol><p>每半天统一更新各组分项、累计分及排名。作业质量的原始成绩和展示原始成绩只用于确定名次，不重复计入总分。</p><p>公示后请组长及时核对；如有疑问，向班务组提出，由班务组核实后更新结果。颁奖前核对漏项与争议，确定最终成绩。</p></div></details>
+        <details class="rules-disclosure" id="rules-brief"><summary>评分与公示说明 <span aria-hidden="true">＋</span></summary><div class="rules-detail">
+          <ul><li><strong>四维评分：</strong>作业质量与 Skill 展示均看应用价值、结构规则、运行效果、边界意识，每维 0—5 分，原始满分 20 分，只用于确定名次，不重复计入总分。</li><li><strong>同分排序：</strong>先比成果展示积分，再比两次作业积分合计（高者优先），最后比考勤扣分（少者优先）。</li><li><strong>积分公示：</strong>每半天更新。公示后由组长核对，有疑问向班务组反馈；颁奖前确认最终成绩。</li></ul>
+          <p class="rules-pending">具体任务、提交时间及尚待明确的评分细节，以授课老师和班务组通知为准。</p>
+        </div></details>
       </div>
-      <p class="rules-notice">作业人均质量成绩算法、补交规则及多名评审老师的合分方式另行明确；具体任务、提交时间与展示安排以开营说明及现场通知为准。</p>
     </section>
 
     <section class="section scores" id="scores" aria-labelledby="scores-title">

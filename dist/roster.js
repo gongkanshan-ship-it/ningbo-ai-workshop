@@ -64,7 +64,7 @@
     list.innerHTML = groups.map(group => `<article class="roster-group"><div class="roster-group-heading"><h3>${escape(group.name)}</h3><span class="roster-group-count">${group.members.length === group.totalMembers ? `${group.totalMembers} 位学员` : `找到 ${group.members.length} / ${group.totalMembers} 位学员`}</span></div><div class="roster-columns" aria-hidden="true"><span>姓名</span><span>所在律所</span></div><ul class="roster-members" aria-label="${escape(group.name)}成员">${group.members.map(member => `<li class="roster-member"><div class="roster-member-name"><strong>${escape(member.name)}</strong>${member.role === 'leader' ? '<span class="roster-leader">组长</span>' : ''}</div><span class="roster-member-firm">${escape(member.firm)}</span></li>`).join('')}</ul></article>`).join('');
   }
 
-  async function loadRoster() {
+  function loadRoster() {
     roster = null;
     toolbar.hidden = true;
     retry.hidden = true;
@@ -72,12 +72,10 @@
     status.textContent = '正在读取小组名册…';
     section.setAttribute('aria-busy', 'true');
     try {
-      const response = await fetch('data/roster.json', {cache:'no-store'});
-      if (!response.ok) throw new Error(`Roster request failed: ${response.status}`);
-      roster = validateRoster(await response.json());
+      roster = validateRoster(window.workshopRosterData);
       if (roster.status === 'pending') {
         status.textContent = '';
-        emptyState('分组名单待公布', '公布后可按小组浏览，并按姓名或律所查找。');
+        emptyState('分组结果待公布', '名单确定后，将在这里按小组展示姓名与所在律所。');
       } else {
         search.value = '';
         groupSelect.innerHTML = '<option value="all">全部小组</option>' + roster.groups.map(group => `<option value="${escape(group.id)}">${escape(group.name)}</option>`).join('');
@@ -96,6 +94,6 @@
   search.addEventListener('input', renderResults);
   groupSelect.addEventListener('change', renderResults);
   reset.addEventListener('click', () => { search.value = ''; groupSelect.value = 'all'; renderResults(); search.focus(); });
-  retry.addEventListener('click', loadRoster);
+  retry.addEventListener('click', () => window.location.reload());
   loadRoster();
 })();

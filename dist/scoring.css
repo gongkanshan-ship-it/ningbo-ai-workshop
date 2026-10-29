@@ -48,26 +48,15 @@
 .score-breakdown strong { flex-shrink: 0; }
 .score-equation { font-size: 14px; overflow-wrap: anywhere; }
 
-/* Detailed criteria stay collapsed until needed; tables scroll within the page. */
+/* Compact participant-facing notes share the same visual rhythm as the rules. */
 .scoring-rule-card > p strong { color: var(--ink); font-weight: 600; }
-.rules-detail { min-width: 0; padding: 4px 0 28px; color: var(--muted); font-size: 15px; line-height: 1.9; }
-.rules-detail h4 { margin: 26px 0 12px; color: var(--ink); font: 23px/1.5 var(--serif); }
-.rules-detail h4:first-child { margin-top: 4px; }
-.rules-detail p + p { margin-top: 12px; }
-.rules-detail > p, .rules-detail > ol, .rules-detail > ul { max-width: 940px; }
+.rules-detail { min-width: 0; padding: 4px 0 24px; color: var(--muted); font-size: 15px; line-height: 1.9; }
 .rules-detail strong { font-weight: 600; color: var(--ink); }
-.rules-detail ol, .rules-detail ul { margin: 14px 0; padding: 0 0 0 24px; font-size: 15px; line-height: 1.9; }
-.rules-detail li + li { margin-top: 9px; }
-.rules-table-wrap { max-width: 100%; overflow-x: auto; margin: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.rules-detail table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 14px; }
-.rules-detail th, .rules-detail td { padding: 15px 18px; text-align: left; vertical-align: top; white-space: normal; border-bottom: 1px solid var(--line); }
-.rules-detail th { color: var(--ink); font-weight: 500; background: #eaf2f8; }
-.rules-detail td { color: var(--muted); font: inherit; }
-.rules-detail tbody tr:last-child td { border-bottom: 0; }
-.rules-tiebreak li::marker { color: var(--blue); font-weight: 600; }
+.rules-detail ul { max-width: 940px; margin: 0; padding: 0 0 0 22px; font-size: 15px; line-height: 1.9; }
+.rules-detail li + li { margin-top: 12px; }
+.rules-pending { margin-top: 16px; font-size: 13px; }
 
 @media (max-width: 700px) {
-  .rules-table-wrap::before { content: "左右滑动查看完整表格 ↔"; display: block; padding: 10px 0; font-size: 12px; color: var(--muted); }
   .scoring-rule-grid { grid-template-columns: minmax(0, 1fr); }
   .score-formula { font-size: 14px; gap: 8px 12px; }
   .score-formula > span:first-child { flex-basis: 100%; font-size: 22px; }
