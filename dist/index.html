@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="guide.css?v=11">
   <link rel="stylesheet" href="resources-v9.css?v=9">
   <link rel="stylesheet" href="workshop-v9.css?v=14">
+  <link rel="stylesheet" href="faq.css?v=15">
   <script src="app.js?v=12" defer></script>
   <script src="resources.js?v=9" defer></script>
   <script src="guide.js?v=10" defer></script>
@@ -34,7 +35,7 @@
       <a href="#courses">课程介绍</a>
       <a href="#groups">组员名单</a>
       <button id="score-nav-toggle" type="button" aria-expanded="false" aria-controls="score-nav-panel">积分中心 <span class="nav-chevron" aria-hidden="true">⌄</span></button>
-      <a href="#support">现场帮助</a>
+      <a href="#support">常见问答</a>
     </nav>
     <div id="score-nav-panel" class="score-nav-panel" hidden>
       <nav aria-label="积分中心分篇">
@@ -119,12 +120,20 @@
       <div class="score-table-wrap" aria-describedby="score-scroll-hint" tabindex="0" role="region" aria-label="小组积分榜，可横向滚动"><table><caption class="sr-only">虚拟小组积分演示。总分为课堂作业加课堂表现加成果展示减出勤扣分。点击小组名称可查看分项结果。</caption><thead><tr><th scope="col">序号</th><th scope="col">小组</th><th scope="col">课堂作业</th><th scope="col">课堂表现</th><th scope="col">成果展示</th><th scope="col">出勤扣分</th><th scope="col">总分</th></tr></thead><tbody id="score-body"></tbody></table></div>
     </section>
 
-    <section class="support section" id="support" aria-labelledby="support-title"><div class="support-lead"><p class="eyebrow">05 / WE ARE HERE TO HELP</p><h2 id="support-title">遇到问题，<br>先来这里。</h2><p>安装、登录、文件操作或积分疑问，<br>找到对应入口，让学习继续。</p><a class="text-link" href="#prepare">查看课前指引 <span aria-hidden="true">↗</span></a></div><div class="support-faq">
-      <details><summary>软件安装或登录失败怎么办？<span aria-hidden="true">＋</span></summary><div><p>先检查网络连接，记录系统版本、软件版本、失败的操作步骤以及完整报错。现场可向技术组出示报错截图，便于快速定位。</p><button type="button" class="text-link" id="copy-support">复制问题反馈模板 <span aria-hidden="true">↗</span></button><p id="copy-status" class="small-note" role="status"></p><textarea id="support-template" hidden readonly aria-label="技术问题反馈模板"></textarea></div></details>
-      <details><summary>课程资料在哪里领取？<span aria-hidden="true">＋</span></summary><div><p>全部课程材料将统一整理为一个 ZIP 压缩包，在“课程资料包”入口一键下载。目前资料包待发布。</p><button type="button" class="text-link" data-open-resources="materials" aria-haspopup="dialog">查看课程资料包 <span aria-hidden="true">↗</span></button></div></details>
-      <details><summary>小组积分有疑问，如何反馈？<span aria-hidden="true">＋</span></summary><div><p>请核对小组、课程或活动环节、分项得分，在公示后及时向班务组提出，附上作品或记录依据。班务组核实后统一更新公示结果。</p><div class="lecturer-contacts"><h4>讲师联系方式</h4><p>各课程讲师姓名、联系方式：待补充。</p></div></div></details>
-      <details><summary>时间、地点与现场联系人在哪里看？<span aria-hidden="true">＋</span></summary><div><p>培训时间为 2026 年 11 月 7—8 日，具体场地待正式通知。班务联系人：董远航（18616366112）；技术联系人：上官明泓（13967892069）。培训期间统一安排午餐，住宿自理。</p></div></details>
-    </div></section>
+    <section class="section faq-section" id="support" aria-labelledby="support-title">
+      <div class="faq-intro"><p class="eyebrow">05 / Q &amp; A</p><h2 id="support-title">常见问答</h2><p class="faq-intro-copy">从课前准备到课堂参与，<br>点击问题，查看解答。</p><div class="faq-topics" aria-label="问答主题"><span>准备</span><span>参与</span><span>积分</span><span>班务</span></div></div>
+      <div class="faq-list">
+        <details class="faq-item" open><summary><span class="faq-index" aria-hidden="true">Q01</span><span class="faq-question">需要携带哪些设备？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>请携带可联网的笔记本电脑、电源适配器及充电线，并准备可扫码或接收验证码的手机。电脑系统与配置要求见“课前指引”。</p><a class="text-link" href="#prepare">查看课前指引 <span aria-hidden="true">↗</span></a></div></div></details>
+        <details class="faq-item"><summary><span class="faq-index" aria-hidden="true">Q02</span><span class="faq-question">软件需要提前准备到什么程度？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>完成 WorkBuddy 安装与登录，按指引启用企查查连接器并完成授权，确认能够看到可用工具。各课所用软件和准备事项可在“软件准备清单”中查看。</p><button type="button" class="text-link" data-open-resources="software" aria-haspopup="dialog">查看软件准备清单 <span aria-hidden="true">↗</span></button></div></div></details>
+        <details class="faq-item"><summary><span class="faq-index" aria-hidden="true">Q03</span><span class="faq-question">全部课程材料在哪里下载？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>全部课程材料将整理为一个 ZIP 压缩包，通过“课程资料包”统一下载。目前完整资料包待发布。</p><button type="button" class="text-link" data-open-resources="materials" aria-haspopup="dialog">查看课程资料包 <span aria-hidden="true">↗</span></button></div></div></details>
+        <details class="faq-item"><summary><span class="faq-index" aria-hidden="true">Q04</span><span class="faq-question">如何查看自己的分组？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>每组 10 人，分组结果将在“组员名单”公布，按小组展示姓名与所在律所。目前名单尚未公布。</p><a class="text-link" href="#groups">查看组员名单 <span aria-hidden="true">↗</span></a></div></div></details>
+        <details class="faq-item"><summary><span class="faq-index" aria-hidden="true">Q05</span><span class="faq-question">可以使用真实案件材料练习吗？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>现场演示和练习统一使用脱敏材料，不使用真实客户材料或未脱敏案件信息。未经允许，不公开传播课程资料、他人成果及现场信息。</p></div></div></details>
+        <details class="faq-item"><summary><span class="faq-index" aria-hidden="true">Q06</span><span class="faq-question">积分多久更新，有疑问怎么办？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>正式积分每半天更新，由组长核对。有疑问请说明小组、计分项目和分值，附上依据向班务组反馈，核实后统一更新结果。</p><p class="faq-note">当前积分榜仍为虚拟演示数据。</p><div class="faq-actions"><a class="text-link" href="#rules">积分规则 <span aria-hidden="true">↗</span></a><a class="text-link" href="#scores">查看积分 <span aria-hidden="true">↗</span></a></div></div></div></details>
+        <details class="faq-item"><summary><span class="faq-index" aria-hidden="true">Q07</span><span class="faq-question">培训时间、地点和餐食如何安排？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>培训日期为 2026 年 11 月 7—8 日，上下午安排见“课程安排”；具体起止钟点和地点待公布。培训期间统一安排午餐，住宿自理。</p><a class="text-link" href="#overview">查看课程安排 <span aria-hidden="true">↗</span></a></div></div></details>
+        <details class="faq-item"><summary><span class="faq-index" aria-hidden="true">Q08</span><span class="faq-question">安装、登录或课堂操作出错怎么办？</span><span class="faq-toggle" aria-hidden="true">＋</span></summary><div class="faq-answer"><span class="faq-answer-label" aria-hidden="true">A</span><div><p>先检查网络连接，保留出错页面和报错截图，记下电脑系统、软件名称及出错步骤，再联系技术组。截图请遮盖个人和客户信息。</p><button type="button" class="text-link" id="copy-support">复制问题反馈模板 <span aria-hidden="true">↗</span></button><p id="copy-status" class="small-note" role="status"></p><textarea id="support-template" hidden readonly aria-label="技术问题反馈模板"></textarea></div></div></details>
+      </div>
+      <aside class="faq-contacts" aria-label="班务与技术联系人"><p class="faq-contact-heading">仍需协助？联系工作人员</p><a href="tel:18616366112"><span>班务组 · 董远航</span><strong>186 1636 6112</strong><small>参训安排、请假及积分反馈</small></a><a href="tel:13967892069"><span>技术组 · 上官明泓</span><strong>139 6789 2069</strong><small>安装、登录、连接及操作问题</small></a></aside>
+    </section>
   </main>
   <footer><a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><i></i></span><span>宁波 · 律师研修<small>AI WORKSHOP</small></span></a><p>让新的工具，成为扎实的工作能力。</p><div><span>蓝白宁波版 · 自适应版</span><small>正式活动信息以通知为准</small></div><a class="back-top" href="#home" aria-label="返回顶部">↑</a></footer>
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><p class="eyebrow" id="dialog-kicker">TEAM PROGRESS</p><button class="dialog-close" aria-label="关闭详情">×</button></div><h2 id="dialog-title"></h2><div id="dialog-content"></div><button class="button primary dialog-done">知道了 <span aria-hidden="true">✓</span></button></dialog>
