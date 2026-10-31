@@ -1,7 +1,7 @@
 /* First-cohort content, with the established Ningbo blue-and-white artwork. */
 .header-main .association-brand { display:flex; flex:0 0 auto; align-items:center; gap:12px; min-width:0; padding:0; background:transparent; color:var(--ink); letter-spacing:0; }
 .association-emblem { display:block; flex:0 0 48px; width:48px; height:48px; overflow:hidden; border-radius:50%; }
-.header-main .association-emblem img { display:block; width:auto; max-width:none; height:100%; }
+.header-main .association-emblem img { display:block; width:100%; height:100%; object-fit:contain; }
 .association-wordmark { font:600 23px/1.4 var(--serif); white-space:nowrap; }
 .header-main .association-wordmark small { display:block; margin-top:3px; font:10px/1.5 var(--sans); letter-spacing:.12em; color:var(--muted); }
 .course-row > summary { grid-template-columns:54px minmax(0,1fr) 26px; }
