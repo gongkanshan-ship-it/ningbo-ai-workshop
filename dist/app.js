@@ -9,7 +9,7 @@ const courses = [
 ];
 const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[char]));
 document.getElementById("course-list").innerHTML = courses.map(course => `
-  <details class="course-row" id="course-${course.id}"><summary><span class="course-number">${course.id}</span><span class="course-title">${course.title}<small>${course.subtitle}</small></span><span class="course-duration">时长待公布</span><span class="course-toggle" aria-hidden="true">＋</span></summary><div class="course-detail"><p>${course.description}</p><div class="course-resource"><div><span class="resource-label">使用软件</span><strong>${course.software}</strong></div><div><span class="resource-label">课前准备</span><p>${course.preparation}</p></div></div></div></details>
+  <details class="course-row" id="course-${course.id}"><summary><span class="course-number">${course.id}</span><span class="course-title">${course.title}<small>${course.subtitle}</small></span><span class="course-toggle" aria-hidden="true">＋</span></summary><div class="course-detail"><p>${course.description}</p><div class="course-resource"><div><span class="resource-label">使用软件</span><strong>${course.software}</strong></div><div><span class="resource-label">课前准备</span><p>${course.preparation}</p></div></div></div></details>
 `).join("");
 const official = {
   workbuddy: "https://www.workbuddy.cn/",
