@@ -25,7 +25,7 @@ document.getElementById("copy-support").addEventListener("click", async () => {
   catch (_) { const textarea = document.getElementById("support-template"); textarea.value = feedbackTemplate; textarea.hidden = false; textarea.focus(); textarea.select(); document.getElementById("copy-status").textContent = "请手动复制下方模板。"; }
 });
 
-// Shared, accessible detail dialog for course resources and scoring evidence.
+// Shared, accessible detail dialog for course resources and the timetable.
 const dialog = document.getElementById("detail-dialog");
 let dialogOwner = null;
 window.workshopDialog = {
@@ -52,30 +52,8 @@ dialog.addEventListener("click", event => {
   if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close();
 });
 
-const scoreNavToggle = document.getElementById("score-nav-toggle");
-const scoreNavPanel = document.getElementById("score-nav-panel");
-function closeScoreNavigation() {
-  scoreNavPanel.hidden = true;
-  scoreNavToggle.setAttribute("aria-expanded", "false");
-}
-scoreNavToggle.addEventListener("click", event => {
-  const open = scoreNavPanel.hidden;
-  scoreNavPanel.hidden = !open;
-  scoreNavToggle.setAttribute("aria-expanded", String(open));
-  if (open && event.detail === 0) scoreNavPanel.querySelector("a").focus();
-});
-scoreNavPanel.querySelectorAll("a").forEach(link => link.addEventListener("click", closeScoreNavigation));
-document.addEventListener("click", event => {
-  if (!scoreNavPanel.contains(event.target) && !scoreNavToggle.contains(event.target)) closeScoreNavigation();
-});
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && !scoreNavPanel.hidden) {
-    closeScoreNavigation();
-    scoreNavToggle.focus();
-  }
-});
-const navLinks = [...document.querySelectorAll("#main-nav a, #score-nav-panel a")];
-const sectionOrder = ["home", "prepare", "overview", "courses", "groups", "rules", "scores", "support"];
+const navLinks = [...document.querySelectorAll("#main-nav a")];
+const sectionOrder = ["home", "prepare", "overview", "courses", "groups", "rules", "support"];
 const trackedSections = sectionOrder.map(id => document.getElementById(id));
 let scrollFrame;
 function updateNavigation() {
@@ -89,10 +67,6 @@ function updateNavigation() {
     if (active) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
   });
-  const scoreActive = ["rules", "scores"].includes(activeSection.id);
-  scoreNavToggle.classList.toggle("active", scoreActive);
-  if (scoreActive) scoreNavToggle.setAttribute("aria-current", "location");
-  else scoreNavToggle.removeAttribute("aria-current");
   scrollFrame = null;
 }
 window.addEventListener("scroll", () => { if (!scrollFrame) scrollFrame = requestAnimationFrame(updateNavigation); }, { passive: true });
@@ -108,7 +82,6 @@ function closeMobileNavigation() {
   siteHeader.classList.remove("navigation-open");
   mobileMenuToggle.setAttribute("aria-expanded", "false");
   mobileMenuToggle.setAttribute("aria-label", "展开导航");
-  closeScoreNavigation();
   updateNavigation();
 }
 mobileMenuToggle.addEventListener("click", () => {
@@ -116,7 +89,6 @@ mobileMenuToggle.addEventListener("click", () => {
   siteHeader.classList.toggle("navigation-open", open);
   mobileMenuToggle.setAttribute("aria-expanded", String(open));
   mobileMenuToggle.setAttribute("aria-label", open ? "收起导航" : "展开导航");
-  if (!open) closeScoreNavigation();
   updateNavigation();
 });
 siteHeader.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener("click", closeMobileNavigation));
